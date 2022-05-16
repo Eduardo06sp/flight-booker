@@ -1,24 +1,6 @@
-# README
+# Flight Booker
+> **NOTE:** This is a work-in-progress. This README will be made much more spectacular upon completion. :}
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A website where visitors may search for a one-way flight then book it.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You may see [the instructions for this project directly on The Odin Project's website](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker).
