@@ -5,5 +5,8 @@
   <%= form.label :origin_id, 'Arriving to:' %>
   <%= form.collection_select :destination_id, Airport.order(:name).reverse, :id, :name %>
 
+  <%= form.label :passengers, 'Number of passengers:' %>
+  <%= form.number_field :passengers, within: 1..4 %>
+
   <%= form.submit 'Search Flights' %>
 <% end %>
