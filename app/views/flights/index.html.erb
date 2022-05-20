@@ -1,3 +1,9 @@
 <%= form_with method: :get do |form| %>
+  <%= form.label :origin_id, 'Departing from:' %>
+  <%= form.collection_select :origin_id, Airport.order(:name), :id, :name %>
+
+  <%= form.label :origin_id, 'Arriving to:' %>
+  <%= form.collection_select :destination_id, Airport.order(:name).reverse, :id, :name %>
+
   <%= form.submit 'Search Flights' %>
 <% end %>
