@@ -26,23 +26,35 @@ Airport.create(
 
 Flight.create(
   [{
+    departure_date: Date.new(2022, 6, 1),
     departure_time: Time.new(2022, 6, 1, 12, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 1),
     arrival_time: Time.new(2022, 6, 1, 15, 0, 0, '-05:00'),
+
     origin_id: 1,
     destination_id: 2
   }, {
+    departure_date: Date.new(2022, 6, 1),
     departure_time: Time.new(2022, 6, 1, 14, 0, 0, '-05:00'),
+    arrival_date: Date.new(2022, 6, 1),
     arrival_time: Time.new(2022, 6, 1, 17, 0, 0, '-03:00'),
+
     origin_id: 2,
     destination_id: 3
   }, {
+    departure_date: Date.new(2022, 6, 1),
     departure_time: Time.new(2022, 6, 1, 16, 0, 0, '-03:00'),
+    arrival_date: Date.new(2022, 6, 1),
     arrival_time: Time.new(2022, 6, 1, 22, 0, 0, '+02:00'),
+
     origin_id: 3,
     destination_id: 4
   }, {
+    departure_date: Date.new(2022, 6, 1),
     departure_time: Time.new(2022, 6, 1, 18, 0, 0, '+02:00'),
+    arrival_date: Date.new(2022, 6, 1),
     arrival_time: Time.new(2022, 6, 1, 12, 0, 0, '-05:00'),
+
     origin_id: 4,
     destination_id: 2
   }]
