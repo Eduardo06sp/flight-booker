@@ -2,6 +2,8 @@ class Flight < ApplicationRecord
   belongs_to :origin, class_name: 'Airport'
   belongs_to :destination, class_name: 'Airport'
 
+  scope :unique_departure_dates, -> { select(:departure_date).distinct }
+
   def departure_dates_formatted
     departure_date.strftime('%m/%d/%y')
   end
