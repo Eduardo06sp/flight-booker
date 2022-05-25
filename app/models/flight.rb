@@ -2,8 +2,8 @@ class Flight < ApplicationRecord
   belongs_to :origin, class_name: 'Airport'
   belongs_to :destination, class_name: 'Airport'
 
-  def departures_formatted
-    "#{Flight.first.departure_date.strftime('%m/%d/%y')} - #{departure_time.strftime('%l:%M%p')}"
+  def departure_dates_formatted
+    departure_date.strftime('%m/%d/%y')
   end
 
   def departure_airport
