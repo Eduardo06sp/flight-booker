@@ -4,7 +4,7 @@ class Flight < ApplicationRecord
 
   scope :unique_departure_dates, -> { select(:departure_date).distinct }
 
-  def departure_dates_formatted
+  def departure_date_formatted
     departure_date.strftime('%m/%d/%y')
   end
 
