@@ -2,7 +2,7 @@
   <%= form.label :origin_id, 'Departing from:' %>
   <%= form.collection_select :origin_id, Airport.order(:name), :id, :name %>
 
-  <%= form.label :origin_id, 'Arriving to:' %>
+  <%= form.label :destination_id, 'Arriving to:' %>
   <%= form.collection_select :destination_id, Airport.order(:name).reverse, :id, :name %>
 
   <%= form.label :passengers, 'Number of passengers:' %>
