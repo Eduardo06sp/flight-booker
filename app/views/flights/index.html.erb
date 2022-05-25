@@ -1,4 +1,4 @@
-<%= form_with method: :get do |form| %>
+<%= form_for :flight, method: :get do |form| %>
   <%= form.label :origin_id, 'Departing from:' %>
   <%= form.collection_select :origin_id, Airport.order(:name), :id, :name %>
 
