@@ -5,8 +5,8 @@
   <%= form.label :destination_id, 'Arriving to:' %>
   <%= form.collection_select :destination_id, Airport.order(:name).reverse, :id, :name %>
 
-  <%= form.label :passengers, 'Number of passengers:' %>
-  <%= form.number_field :passengers, within: 1..4 %>
+  <%= form.label :available_seats, 'Number of passengers:' %>
+  <%= form.number_field :available_seats, within: 1..4 %>
 
   <%= form.label :departure_time, 'Departure time:' %>
   <%= form.select :departure_time, options_from_collection_for_select(@flights, 'id', :departures_formatted) %>
