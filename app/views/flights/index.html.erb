@@ -9,7 +9,7 @@
   <%= form.number_field :available_seats, within: 1..4 %>
 
   <%= form.label :departure_date, 'Departure date:' %>
-  <%= form.select :departure_date, options_from_collection_for_select(@flights, :departure_date, :departure_dates_formatted) %>
+  <%= form.select :departure_date, options_from_collection_for_select(@flights.unique_departure_dates, :departure_date, :departure_dates_formatted) %>
 
   <%= form.submit 'Search Flights' %>
 <% end %>
