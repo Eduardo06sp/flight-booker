@@ -36,6 +36,24 @@ Flight.create(
     destination_id: 2
   }, {
     departure_date: Date.new(2022, 6, 1),
+    departure_time: Time.new(2022, 6, 1, 14, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 1),
+    arrival_time: Time.new(2022, 6, 1, 17, 0, 0, '-05:00'),
+    available_seats: 200,
+
+    origin_id: 1,
+    destination_id: 2
+  }, {
+    departure_date: Date.new(2022, 6, 5),
+    departure_time: Time.new(2022, 6, 1, 14, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 5),
+    arrival_time: Time.new(2022, 6, 1, 17, 0, 0, '-05:00'),
+    available_seats: 200,
+
+    origin_id: 1,
+    destination_id: 2
+  }, {
+    departure_date: Date.new(2022, 6, 1),
     departure_time: Time.new(2022, 6, 1, 14, 0, 0, '-05:00'),
     arrival_date: Date.new(2022, 6, 1),
     arrival_time: Time.new(2022, 6, 1, 17, 0, 0, '-03:00'),
