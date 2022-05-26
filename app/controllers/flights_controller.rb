@@ -8,7 +8,7 @@ class FlightsController < ApplicationController
         destination_id: params[:destination_id],
         departure_date: params[:departure_date]
       ).where(
-        'available_seats >= ?', params[:available_seats]
+        'available_seats >= ?', params[:passengers]
       )
     end
   end
