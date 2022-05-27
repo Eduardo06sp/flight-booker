@@ -15,7 +15,7 @@
 <% end %>
 
 <% if params[:commit] %>
-  <%= form_with url: false, method: :get do |form| %>
+  <%= form_with url: bookings_new_path, method: :get do |form| %>
 
     <% @selected_flights.each do |flight| %>
       <input type="radio" id="flight_id_<%= flight.id %>" name="flight_id" value="<%= flight.id %>">
@@ -38,5 +38,6 @@
       <%= hidden_field_tag :passengers, params[:passengers] %>
     <% end %>
 
+    <%= form.submit %>
   <% end %>
 <% end %>
