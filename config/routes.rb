@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   get 'flights/index'
 
+  post 'passengers', to: 'passengers#create'
+
   root 'flights#index'
 end
