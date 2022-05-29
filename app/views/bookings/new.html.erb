@@ -16,5 +16,21 @@
     <p><%= @selected_flight.arrival_time_formatted %></p>
   </div>
 
+  <% @number_of_passengers.times do %>
+    <%= form.fields_for @flight_passenger do |sub_form| %>
+      <%= sub_form.label :first_name, 'First Name:' %>
+      <%= sub_form.text_field :first_name %>
+
+      <%= sub_form.label :last_name, 'Last Name:' %>
+      <%= sub_form.text_field :last_name %>
+
+      <%= sub_form.label :email, 'Email:' %>
+      <%= sub_form.email_field :email %>
+
+      <%= sub_form.label :phone_number, 'Phone number:' %>
+      <%= sub_form.telephone_field :phone_number %>
+    <% end %>
+  <% end %>
+
   <%= form.submit %>
 <% end %>
