@@ -2,6 +2,7 @@ class Flight < ApplicationRecord
   belongs_to :origin, class_name: 'Airport'
   belongs_to :destination, class_name: 'Airport'
 
+  has_many :bookings
   has_many :passengers, through: :bookings
 
   scope :unique_departure_dates, -> { select(:departure_date).distinct }
