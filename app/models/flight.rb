@@ -4,6 +4,7 @@ class Flight < ApplicationRecord
 
   has_many :bookings
   has_many :passengers, through: :bookings
+  accepts_nested_attributes_for :passengers
 
   scope :unique_departure_dates, -> { select(:departure_date).distinct }
 

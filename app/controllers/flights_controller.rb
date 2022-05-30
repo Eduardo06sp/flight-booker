@@ -13,6 +13,9 @@ class FlightsController < ApplicationController
     end
   end
 
+  def update
+  end
+
   private
 
   def flight_params
