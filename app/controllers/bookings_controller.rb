@@ -13,11 +13,9 @@ class BookingsController < ApplicationController
     # @booking = Booking.create(passenger_params)
     # @booking = Booking.create(flight_id: params[:flight_id])
     @booking = Booking.new(passenger_params)
-
-    if @booking.save!
-      flash[:notice] = 'saved!'
-    else
-      flash[:alert] = 'no save :{'
+    passenger_params[:passengers_attributes].each do |i, passenger_attributes|
+      @booking.passengers[i.to_i].update(passenger_attributes)
+      Booking.create(flight_id: @booking.flight_id, passenger_id: @booking.passengers[i.to_i].id)
     end
   end
 
