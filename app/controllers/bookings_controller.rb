@@ -10,6 +10,8 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @booking = Booking.new(passenger_params)
+    @booking.save
   end
 
   def passenger_params
