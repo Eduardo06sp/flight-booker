@@ -9,15 +9,8 @@ class BookingsController < ApplicationController
   end
 
   def create
-    # @selected_flight = Flight.find(params[:flight_id])
-    # @booking = Booking.create(passenger_params)
-    # @booking = Booking.create(flight_id: params[:flight_id])
     @booking = Booking.new(passenger_params)
-    passenger_params[:passengers_attributes].each do |i, passenger_attributes|
-      @booking.passengers[i.to_i].update(passenger_attributes)
-      b = Booking.create(flight_id: @booking.flight_id, passenger_id: @booking.passengers[i.to_i].id)
-      @booking.passengers[i.to_i].update(booking_id: b.id)
-    end
+    @booking.save!
   end
 
   private
