@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @selected_flight = @booking.flight
   end
 
   def passenger_params
