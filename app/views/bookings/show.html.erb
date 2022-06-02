@@ -14,3 +14,12 @@
   <p><%= @selected_flight.arrival_date_formatted %></p>
   <p><%= @selected_flight.arrival_time_formatted %></p>
 </div>
+
+<h2>Passengers</h2>
+<div class="passengers-info">
+  <% @booking.passengers.each do |passenger| %>
+    <p><span>Name:</span><%= " #{passenger.first_name} #{passenger.last_name}" %></p>
+    <p><span>Email:</span><%= " #{passenger.email}" %></p>
+    <p><span>Phone Number:</span><%= " #{passenger.phone_number}" %></p>
+  <% end %>
+</div>
