@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   get 'bookings/:id', to: 'bookings#show', as: 'booking'
   post 'bookings', to: 'bookings#create'
 
-  get 'flights/index'
-
   post 'passengers', to: 'passengers#create'
+
+  resources :flights, only: %w[index]
 
   root 'flights#index'
 end
