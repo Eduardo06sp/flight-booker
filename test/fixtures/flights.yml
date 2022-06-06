@@ -5,7 +5,7 @@ firstflight:
   departure_time: <%= Time.new(2022, 6, 1, 12, 0, 0, '-07:00') %>
   arrival_date: <%= Date.new(2022, 6, 1) %>
   arrival_time: <%= Time.new(2022, 6, 1, 15, 0, 0, '-05:00') %>
-  available_seats: '20'
+  available_seats: 20
   origin: losangelesairport
   destination: guadalajaraairport
 
@@ -14,7 +14,7 @@ secondflight:
   departure_time: <%= Time.new(2022, 6, 1, 14, 0, 0, '-07:00') %>
   arrival_date: <%= Date.new(2022, 6, 1) %>
   arrival_time: <%= Time.new(2022, 6, 1, 17, 0, 0, '-05:00') %>
-  available_seats: '200'
+  available_seats: 200
   origin: losangelesairport
   destination: guadalajaraairport
 
