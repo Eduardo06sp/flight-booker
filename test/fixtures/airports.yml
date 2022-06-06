@@ -7,3 +7,7 @@ guadalajaraairport:
 losangelesairport:
   name: Los Angeles
   code: LAX
+
+riodejaneiroairport:
+  name: Rio de Janeiro
+  code: SDU
