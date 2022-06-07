@@ -18,4 +18,9 @@ class FlightTest < ActiveSupport::TestCase
     distinct_departing_times = distinct_departing_flights.map(&:departure_date)
     assert_equal distinct_departing_times, distinct_departing_times.uniq
   end
+
+  test 'should return properly formatted departure date for first flight' do
+    formatted_departure_date = flights(:firstflight).departure_date_formatted
+    assert_equal '06/01/22', formatted_departure_date
+  end
 end
