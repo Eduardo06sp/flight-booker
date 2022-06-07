@@ -22,8 +22,4 @@ class Flight < ApplicationRecord
   def arrival_time_formatted
     arrival_time.strftime('%I:%M%P')
   end
-
-  def arrival_airport
-    Airport.find_sole_by id: destination_id
-  end
 end
