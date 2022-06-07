@@ -6,4 +6,10 @@ class FlightTest < ActiveSupport::TestCase
     origin = first_flight.origin
     assert_equal 'LAX', origin.code
   end
+
+  test 'should associate Rio de Janeiro airport as destination for third flight' do
+    third_flight = flights(:thirdflight)
+    destination = third_flight.destination
+    assert_equal 'SDU', destination.code
+  end
 end
