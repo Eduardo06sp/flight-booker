@@ -20,20 +20,7 @@
     <% @selected_flights.each do |flight| %>
       <input type="radio" id="flight_id_<%= flight.id %>" name="flight_id" value="<%= flight.id %>">
       <label for="flight_id_<%= flight.id %>">
-        <div class="departure_result_info">
-          <p>Departing from</p>
-          <p><%= flight.origin.code %></p>
-          <p><%= flight.origin.name %></p>
-          <p><%= flight.departure_date_formatted %></p>
-          <p><%= flight.departure_time_formatted %></p>
-        </div>
-        <div class="arrival_result_info">
-          <p>Arriving to<p>
-          <p><%= flight.destination.code %></p>
-          <p><%= flight.destination.name %></p>
-          <p><%= flight.arrival_date_formatted %></p>
-          <p><%= flight.arrival_time_formatted %></p>
-        </div>
+        <%= render 'shared/flight_result', flight: flight %>
       </label>
       <%= hidden_field_tag :passengers, params[:passengers] %>
     <% end %>

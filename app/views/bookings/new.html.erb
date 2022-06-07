@@ -1,20 +1,7 @@
 <h1>THIS BETTER WORK!</h1>
 <%= form_with model: @booking do |form| %>
 
-  <div class="departure_result_info">
-    <p>Departing from</p>
-    <p><%= @selected_flight.origin.code %></p>
-    <p><%= @selected_flight.origin.name %></p>
-    <p><%= @selected_flight.departure_date_formatted %></p>
-    <p><%= @selected_flight.departure_time_formatted %></p>
-  </div>
-  <div class="arrival_result_info">
-    <p>Arriving to<p>
-    <p><%= @selected_flight.destination.code %></p>
-    <p><%= @selected_flight.destination.name %></p>
-    <p><%= @selected_flight.arrival_date_formatted %></p>
-    <p><%= @selected_flight.arrival_time_formatted %></p>
-  </div>
+  <%= render 'shared/flight_result', flight: @selected_flight %>
 
   <%= form.hidden_field :flight_id, { value: params[:flight_id] } %>
 
