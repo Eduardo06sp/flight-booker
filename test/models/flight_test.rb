@@ -12,4 +12,10 @@ class FlightTest < ActiveSupport::TestCase
     destination = third_flight.destination
     assert_equal 'SDU', destination.code
   end
+
+  test 'should return distinct departure dates' do
+    distinct_departing_flights = Flight.all.unique_departure_dates
+    distinct_departing_times = distinct_departing_flights.map(&:departure_date)
+    assert_equal distinct_departing_times, distinct_departing_times.uniq
+  end
 end
