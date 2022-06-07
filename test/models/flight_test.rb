@@ -33,4 +33,9 @@ class FlightTest < ActiveSupport::TestCase
     formatted_arrival_date = flights(:secondflight).arrival_date_formatted
     assert_equal '06/01/22', formatted_arrival_date
   end
+
+  test 'should return properly formatted arrival time for first flight' do
+    formatted_arrival_time = flights(:firstflight).arrival_time_formatted
+    assert_equal '08:00pm', formatted_arrival_time
+  end
 end
