@@ -2,8 +2,8 @@
 
 <div class="departure_result_info">
   <p>Departing from</p>
-  <p><%= @selected_flight.departure_airport.code %></p>
-  <p><%= @selected_flight.departure_airport.name %></p>
+  <p><%= @selected_flight.origin.code %></p>
+  <p><%= @selected_flight.origin.name %></p>
   <p><%= @selected_flight.departure_date_formatted %></p>
   <p><%= @selected_flight.departure_time_formatted %></p>
 </div>

@@ -22,8 +22,8 @@
       <label for="flight_id_<%= flight.id %>">
         <div class="departure_result_info">
           <p>Departing from</p>
-          <p><%= flight.departure_airport.code %></p>
-          <p><%= flight.departure_airport.name %></p>
+          <p><%= flight.origin.code %></p>
+          <p><%= flight.origin.name %></p>
           <p><%= flight.departure_date_formatted %></p>
           <p><%= flight.departure_time_formatted %></p>
         </div>

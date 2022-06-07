@@ -15,10 +15,6 @@ class Flight < ApplicationRecord
     departure_time.strftime('%I:%M%P')
   end
 
-  def departure_airport
-    Airport.find_sole_by id: origin_id
-  end
-
   def arrival_date_formatted
     arrival_date.strftime('%m/%d/%y')
   end
