@@ -25,4 +25,17 @@ class FlightsControllerTest < ActionDispatch::IntegrationTest
 
     assert_select '.arrival_result_info', false
   end
+
+  test 'should not display fourthflight without enough available seats' do
+    get flights_path, params: {
+      origin_id: airports(:riodejaneiroairport).id,
+      destination_id: airports(:losangelesairport).id,
+      departure_date: '2022-06-02',
+      passengers: '3',
+      commit: 'Search Flights'
+    }
+    assert_response :success
+
+    assert_select '.flight_result_container', false
+  end
 end
