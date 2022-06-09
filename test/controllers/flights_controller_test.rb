@@ -18,4 +18,11 @@ class FlightsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.departure_result_info p:nth-child(2)', text: 'GDL', count: 1
     assert_select '.arrival_result_info p:nth-child(2)', text: 'SDU', count: 1
   end
+
+  test 'should not display search results without parameters' do
+    get flights_path
+    assert_response :success
+
+    assert_select '.arrival_result_info', false
+  end
 end
