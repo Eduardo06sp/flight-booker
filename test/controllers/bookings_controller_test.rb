@@ -23,4 +23,15 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
 
     assert_select 'label + input', 8
   end
+
+  test 'should display 4 passenger inputs for 1 passenger' do
+    get bookings_new_path, params: {
+      flight_id: flights(:fourthflight).id,
+      passengers: '1',
+      commit: 'Save '
+    }
+    assert_response :success
+
+    assert_select 'label + input', 4
+  end
 end
