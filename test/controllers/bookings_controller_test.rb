@@ -1,6 +1,11 @@
 require "test_helper"
 
 class BookingsControllerTest < ActionDispatch::IntegrationTest
+
+  test 'should route to Bookings new controller' do
+    assert_routing '/bookings/new', controller: 'bookings', action: 'new'
+  end
+
   test 'should display new bookings view with selected flight' do
     get bookings_new_path, params: {
       flight_id: flights(:fourthflight).id,
