@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'bookings/new'
+
+  resources :bookings, only: %w[new]
+
   get 'bookings/:id', to: 'bookings#show', as: 'booking'
   post 'bookings', to: 'bookings#create'
 
