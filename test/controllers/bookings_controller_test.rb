@@ -1,7 +1,6 @@
 require "test_helper"
 
 class BookingsControllerTest < ActionDispatch::IntegrationTest
-
   test 'should route to Bookings new controller' do
     assert_routing '/bookings/new', controller: 'bookings', action: 'new'
   end
