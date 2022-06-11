@@ -2,7 +2,8 @@ require "test_helper"
 
 class FlightsControllerTest < ActionDispatch::IntegrationTest
   test 'should route to Flights index' do
-    assert_routing '/flights', controller: 'flights', action: 'index'
+    assert_generates '/', controller: 'flights', action: 'index'
+    assert_recognizes({ controller: 'flights', action: 'index' }, '/flights')
   end
 
   test 'should display thirdflight' do
