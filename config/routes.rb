@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :bookings, only: %w[new]
+  resources :bookings, only: %w[new show]
 
-  get 'bookings/:id', to: 'bookings#show', as: 'booking'
   post 'bookings', to: 'bookings#create'
 
   post 'passengers', to: 'passengers#create'
