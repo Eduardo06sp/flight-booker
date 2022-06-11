@@ -14,7 +14,7 @@
   <%= form.submit 'Search Flights' %>
 <% end %>
 
-<% if params[:commit] %>
+<% if params[:commit] && @selected_flights.any? %>
   <%= form_with url: new_booking_path, method: :get do |form| %>
 
     <% @selected_flights.each do |flight| %>
@@ -25,7 +25,6 @@
     <% end %>
 
     <%= hidden_field_tag :passengers, params[:passengers] %>
-
     <%= form.submit 'Select Flight' %>
   <% end %>
 <% end %>
