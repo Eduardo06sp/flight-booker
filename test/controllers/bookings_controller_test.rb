@@ -5,6 +5,10 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
     assert_routing '/bookings/new', controller: 'bookings', action: 'new'
   end
 
+  test 'shoud route to Bookings show controller' do
+    assert_routing '/bookings/:id', controller: 'bookings', action: 'show', id: ':id'
+  end
+
   test 'should display new bookings view with selected flight' do
     get new_booking_path, params: {
       flight_id: flights(:fourthflight).id,
