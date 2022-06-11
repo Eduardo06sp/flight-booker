@@ -22,8 +22,9 @@
       <label for="flight_id_<%= flight.id %>">
         <%= render 'shared/flight_result', flight: flight %>
       </label>
-      <%= hidden_field_tag :passengers, params[:passengers] %>
     <% end %>
+
+    <%= hidden_field_tag :passengers, params[:passengers] %>
 
     <%= form.submit %>
   <% end %>
