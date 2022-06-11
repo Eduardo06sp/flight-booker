@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'flights#index'
 
   resources :bookings, only: %w[new show]
 
@@ -7,6 +8,4 @@ Rails.application.routes.draw do
   post 'passengers', to: 'passengers#create'
 
   resources :flights, only: %w[index]
-
-  root 'flights#index'
 end
