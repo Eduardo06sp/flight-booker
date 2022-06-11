@@ -37,7 +37,7 @@ class FlightsTest < ApplicationSystemTestCase
     visit "/?origin_id=#{origin_airport}&destination_id=#{destination_airport}&passengers=2&departure_date=2022-06-01&commit=Search+Flights"
 
     choose("flight_id_#{secondflight}")
-    click_on('Save')
+    click_on('Select Flight')
 
     assert_current_path '/bookings/new', ignore_query: true
   end
