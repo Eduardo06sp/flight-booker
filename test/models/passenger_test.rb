@@ -30,4 +30,10 @@ class PassengerTest < ActiveSupport::TestCase
     assert_not passenger.valid?
     assert_not_empty passenger.errors[:email]
   end
+
+  test 'should be invalid without phone number' do
+    passenger = Passenger.new
+    assert_not passenger.valid?
+    assert_not_empty passenger.errors[:phone_number]
+  end
 end
