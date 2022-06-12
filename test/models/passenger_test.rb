@@ -39,6 +39,14 @@ class PassengerTest < ActiveSupport::TestCase
     assert_empty passenger.errors[:email]
   end
 
+  test 'should be invalid without properly foratted email' do
+    invalid_email = 'testtestco.com'
+    passenger = Passenger.new(email: invalid_email)
+
+    assert_not passenger.valid?
+    assert_not_empty passenger.errors[:email]
+  end
+
   test 'should be invalid without phone number' do
     passenger = Passenger.new
     assert_not passenger.valid?
