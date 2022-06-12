@@ -18,4 +18,10 @@ class PassengerTest < ActiveSupport::TestCase
     assert_not passenger.valid?
     assert_not_empty passenger.errors[:first_name]
   end
+
+  test 'should be invalid without last name' do
+    passenger = Passenger.new
+    assert_not passenger.valid?
+    assert_not_empty passenger.errors[:last_name]
+  end
 end
