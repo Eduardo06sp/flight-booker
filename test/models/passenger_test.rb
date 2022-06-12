@@ -6,7 +6,7 @@ class PassengerTest < ActiveSupport::TestCase
       first_name: 'Johnny',
       last_name: 'Bravo',
       email: 'johnny@bra.vo',
-      phone_number: '4311000000',
+      phone_number: '4311000000'
     }
     passenger = Passenger.new(passenger_info)
 
