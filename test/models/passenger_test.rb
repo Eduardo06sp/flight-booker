@@ -41,6 +41,14 @@ class PassengerTest < ActiveSupport::TestCase
     assert_not_empty passenger.errors[:last_name]
   end
 
+  test 'should be invalid with last name longer than 100 characters' do
+    invalid_last_name = 'a' * 101
+    passenger = Passenger.new(last_name: invalid_last_name)
+
+    passenger.valid?
+    assert_not_empty passenger.errors[:last_name]
+  end
+
   test 'should be invalid without email' do
     passenger = Passenger.new
     assert_not passenger.valid?
