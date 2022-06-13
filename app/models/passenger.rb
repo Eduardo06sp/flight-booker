@@ -2,10 +2,7 @@ class Passenger < ApplicationRecord
   has_many :bookings
 
   validates :first_name,
-            presence: true,
-            length: { maximum: 100 },
-            format: { without: /[^A-Za-z ]+/ }
-  validates :last_name,
+            :last_name,
             presence: true,
             length: { maximum: 100 },
             format: { without: /[^A-Za-z ]+/ }
