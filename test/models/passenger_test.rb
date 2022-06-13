@@ -84,4 +84,12 @@ class PassengerTest < ActiveSupport::TestCase
     assert_not passenger.valid?
     assert_not_empty passenger.errors[:phone_number]
   end
+
+  test 'should be invalid with improperly formatted phone number' do
+    invalid_phone_number = '11123-456-7890'
+    passenger = Passenger.new(phone_number: invalid_phone_number)
+
+    assert_not passenger.valid?
+    assert_not_empty passenger.errors[:phone_number]
+  end
 end
