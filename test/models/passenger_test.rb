@@ -23,7 +23,7 @@ class PassengerTest < ActiveSupport::TestCase
     invalid_first_name = 'a' * 101
     passenger = Passenger.new(first_name: invalid_first_name)
 
-    passenger.valid?
+    assert_not passenger.valid?
     assert_not_empty passenger.errors[:first_name]
   end
 
@@ -31,7 +31,7 @@ class PassengerTest < ActiveSupport::TestCase
     invalid_first_name = 'Eduard0'
     passenger = Passenger.new(first_name: invalid_first_name)
 
-    passenger.valid?
+    assert_not passenger.valid?
     assert_not_empty passenger.errors[:first_name]
   end
 
@@ -45,7 +45,7 @@ class PassengerTest < ActiveSupport::TestCase
     invalid_last_name = 'a' * 101
     passenger = Passenger.new(last_name: invalid_last_name)
 
-    passenger.valid?
+    assert_not passenger.valid?
     assert_not_empty passenger.errors[:last_name]
   end
 
@@ -53,7 +53,7 @@ class PassengerTest < ActiveSupport::TestCase
     invalid_last_name = 'Sabr!na'
     passenger = Passenger.new(last_name: invalid_last_name)
 
-    passenger.valid?
+    assert_not passenger.valid?
     assert_not_empty passenger.errors[:last_name]
   end
 
