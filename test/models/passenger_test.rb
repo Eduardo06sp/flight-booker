@@ -49,6 +49,14 @@ class PassengerTest < ActiveSupport::TestCase
     assert_not_empty passenger.errors[:last_name]
   end
 
+  test 'should be invalid with nonalphabetic characters in last name' do
+    invalid_last_name = 'Sabr!na'
+    passenger = Passenger.new(last_name: invalid_last_name)
+
+    passenger.valid?
+    assert_not_empty passenger.errors[:last_name]
+  end
+
   test 'should be invalid without email' do
     passenger = Passenger.new
     assert_not passenger.valid?
