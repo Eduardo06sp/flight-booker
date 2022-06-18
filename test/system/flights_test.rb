@@ -12,7 +12,7 @@ class FlightsTest < ApplicationSystemTestCase
 
     select 'Los Angeles', from: 'origin_id'
     select 'Guadalajara', from: 'destination_id'
-    fill_in 'passengers', with: '4'
+    select '4', from: 'passengers'
     select '06/01/22', from: 'departure_date'
 
     click_on 'commit'
