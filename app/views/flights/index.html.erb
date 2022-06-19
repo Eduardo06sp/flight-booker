@@ -1,3 +1,4 @@
+<h2>Search for Flight</h2>
 <%= form_with url: false, method: :get do |form| %>
   <%= form.label :origin_id, 'Departing from:' %>
   <%= form.collection_select :origin_id, Airport.order(:name), :id, :name %>
