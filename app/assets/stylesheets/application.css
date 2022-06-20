@@ -68,3 +68,7 @@ header {
 main {
   flex: 1;
 }
+
+main, footer {
+  line-height: 1.5;
+}
