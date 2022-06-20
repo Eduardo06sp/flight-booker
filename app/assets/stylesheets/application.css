@@ -72,3 +72,17 @@ main {
 main, footer {
   line-height: 1.5;
 }
+
+/* FOOTER */
+
+footer {
+  font-size: 0.9rem;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer li {
+  margin-top: 12px;
+}
