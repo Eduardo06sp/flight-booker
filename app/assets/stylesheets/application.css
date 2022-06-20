@@ -30,3 +30,7 @@ html, body {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+body {
+  font-size: 1.1rem;
+}
