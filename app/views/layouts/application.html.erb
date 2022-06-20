@@ -13,8 +13,12 @@
 
   <body>
     <header>
-      <%= image_tag 'plane-logo.svg', alt: 'Outline of plane descending from the ground' %>
-      <h1>Flight Booker</h1>
+      <div class="logo-and-text">
+        <div class="logo">
+          <%= image_tag 'plane-logo.svg', alt: 'Outline of plane descending from the ground' %>
+        </div>
+        <h1>Flight Booker</h1>
+      </div>
       <nav>
         <%= link_to "Flight Search", root_path %>
       </nav>
