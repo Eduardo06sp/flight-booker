@@ -40,6 +40,10 @@ body {
 
 /* HEADER */
 
+header {
+  margin-bottom: 15px;
+}
+
 .logo-and-text {
   display: flex;
   gap: 15px;
