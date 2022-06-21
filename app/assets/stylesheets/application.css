@@ -63,6 +63,10 @@ header {
   display: flex;
 }
 
+header a {
+  padding: 11px 0;
+}
+
 /* MAIN */
 
 main {
