@@ -15,7 +15,7 @@ class FlightsTest < ApplicationSystemTestCase
     select '4', from: 'passengers'
     select '06/01/22', from: 'departure_date'
 
-    click_on 'commit'
+    click_on 'Search Flights'
 
     find('form:nth-child(2)').assert_text 'LAX', count: 2
     find('form:nth-child(2)').assert_text 'Los Angeles', count: 2
