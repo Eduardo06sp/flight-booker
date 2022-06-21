@@ -1,18 +1,28 @@
 <h2>Search for Flight</h2>
 <%= form_with url: false, method: :get, class: 'search_form' do |form| %>
-  <%= form.label :origin_id, 'Departing from:' %>
-  <%= form.collection_select :origin_id, Airport.order(:name), :id, :name %>
+  <div>
+    <%= form.label :origin_id, 'Departing from:' %>
+    <%= form.collection_select :origin_id, Airport.order(:name), :id, :name %>
+  </div>
 
-  <%= form.label :destination_id, 'Arriving to:' %>
-  <%= form.collection_select :destination_id, Airport.order(:name).reverse, :id, :name %>
+  <div>
+    <%= form.label :destination_id, 'Arriving to:' %>
+    <%= form.collection_select :destination_id, Airport.order(:name).reverse, :id, :name %>
+  </div>
 
-  <%= form.label :passengers, 'Number of passengers:' %>
-  <%= form.select :passengers, (1..4).to_a %>
+  <div>
+    <%= form.label :passengers, 'Number of passengers:' %>
+    <%= form.select :passengers, (1..4).to_a %>
+  </div>
 
-  <%= form.label :departure_date, 'Departure date:' %>
-  <%= form.select :departure_date, options_from_collection_for_select(@flights.unique_departure_dates, :departure_date, :departure_date_formatted) %>
+  <div>
+    <%= form.label :departure_date, 'Departure date:' %>
+    <%= form.select :departure_date, options_from_collection_for_select(@flights.unique_departure_dates, :departure_date, :departure_date_formatted) %>
+  </div>
 
-  <%= form.submit 'Search Flights' %>
+  <div>
+    <%= form.submit 'Search Flights' %>
+  </div>
 <% end %>
 
 <% if params[:commit] && @selected_flights.any? %>
