@@ -6,18 +6,28 @@
   <%= form.hidden_field :flight_id, { value: params[:flight_id] } %>
 
   <%= form.fields_for :passengers do |sub_form| %>
-    <%= sub_form.label :first_name, 'First Name:' %>
-    <%= sub_form.text_field :first_name %>
+    <div>
+      <%= sub_form.label :first_name, 'First Name:' %>
+      <%= sub_form.text_field :first_name %>
+    </div>
 
-    <%= sub_form.label :last_name, 'Last Name:' %>
-    <%= sub_form.text_field :last_name %>
+    <div>
+      <%= sub_form.label :last_name, 'Last Name:' %>
+      <%= sub_form.text_field :last_name %>
+    </div>
 
-    <%= sub_form.label :email, 'Email:' %>
-    <%= sub_form.email_field :email %>
+    <div>
+      <%= sub_form.label :email, 'Email:' %>
+      <%= sub_form.email_field :email %>
+    </div>
 
-    <%= sub_form.label :phone_number, 'Phone number:' %>
-    <%= sub_form.telephone_field :phone_number %>
+    <div>
+      <%= sub_form.label :phone_number, 'Phone number:' %>
+      <%= sub_form.telephone_field :phone_number %>
+    </div>
   <% end %>
 
-  <%= form.submit %>
+  <div>
+    <%= form.submit %>
+  </div>
 <% end %>
