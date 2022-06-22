@@ -15,3 +15,59 @@
   height: 44px;
   max-width: 250px;
 }
+
+/* FLIGHT RESULTS */
+
+.flight_results_form {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 15px 0;
+}
+
+.flight_results_form input {
+  height: 44px;
+}
+
+.flight_results_form input[type="radio"] {
+  height: 18px;
+  width: 18px;
+}
+
+.flight_result_selection {
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.flight_result_selection label {
+  flex: 1;
+}
+
+.flight_result_selection p:first-child {
+  font-weight: bold;
+}
+
+.flight_results_form input[type="submit"] {
+  font-size: 1.1rem;
+  width: 150px;
+}
+
+.departure_result_info,
+.arrival_result_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.departure_result_info p:first-child,
+.arrival_result_info p:first-child {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.flight_result_container .result_airport_name,
+.flight_result_container .result_date {
+  color: rgba(0, 0, 0, 0.7);
+}
