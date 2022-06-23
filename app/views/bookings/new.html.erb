@@ -33,7 +33,10 @@
 
       <div>
         <%= sub_form.label :phone_number, 'Phone number:' %>
-        <%= sub_form.telephone_field :phone_number %>
+        <%= sub_form.telephone_field :phone_number,
+          required: true,
+          title: 'Phone number should be in the format: 1112223333, 111-222-3333, or (111)222-3333. There may be a space after the area code.',
+          pattern: '^\(?\d{3}[)-]?\s?\d{3}-?\d{4}$' %>
       </div>
     </div>
   <% end %>
