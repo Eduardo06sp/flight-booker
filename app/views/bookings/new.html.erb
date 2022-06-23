@@ -9,12 +9,20 @@
     <div class="passenger_fields">
       <div>
         <%= sub_form.label :first_name, 'First Name:' %>
-        <%= sub_form.text_field :first_name %>
+        <%= sub_form.text_field :first_name,
+          maxlength: 100,
+          pattern: '[A-Za-z ]+',
+          title: 'First name should only contain letters/spaces.',
+          required: true %>
       </div>
 
       <div>
         <%= sub_form.label :last_name, 'Last Name:' %>
-        <%= sub_form.text_field :last_name %>
+        <%= sub_form.text_field :last_name,
+          maxlength: 100,
+          pattern: '[A-Za-z ]+',
+          title: 'Last name should only contain letters/spaces.',
+          required: true %>
       </div>
 
       <div>
