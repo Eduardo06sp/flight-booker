@@ -1,0 +1,18 @@
+.bookings_show_flight_results .departure_result_info p:first-child,
+.bookings_show_flight_results .arrival_result_info p:first-child {
+  font-weight: bold;
+}
+
+/* PASSENGERS INFO */
+
+.passengers-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.passenger-info span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
