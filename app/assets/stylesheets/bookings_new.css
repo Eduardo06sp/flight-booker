@@ -3,7 +3,11 @@
 }
 
 .new_booking_form .flight_result_container {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 0 auto 40px;
+  max-width: 300px;
 }
 
 /* PASSENGER FIELDS */
