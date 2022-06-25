@@ -5,6 +5,7 @@
 
 .bookings_show_flight_results .departure_result_info p:first-child,
 .bookings_show_flight_results .arrival_result_info p:first-child {
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
