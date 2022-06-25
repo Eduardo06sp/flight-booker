@@ -123,4 +123,20 @@ footer li {
   .search_form {
     justify-content: center;
   }
+
+  .confirmation_heading,
+  .passengers_heading {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .flight_result_container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .passengers-info {
+    gap: 45px;
+  }
 }
