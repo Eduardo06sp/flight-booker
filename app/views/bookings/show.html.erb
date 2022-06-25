@@ -8,7 +8,7 @@
 <div class="passengers-info">
   <% @booking.passengers.each do |passenger| %>
     <div class="passenger-info">
-      <p><span>Name:</span><%= " #{passenger.first_name} #{passenger.last_name}" %></p>
+      <p class="passenger_name"><%= "#{passenger.first_name} #{passenger.last_name}" %></p>
       <p><span>Email:</span><%= " #{passenger.email}" %></p>
       <p><span>Phone Number:</span><%= " #{passenger.phone_number}" %></p>
     </div>
