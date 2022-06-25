@@ -24,3 +24,8 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.passenger_name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
