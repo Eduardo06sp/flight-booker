@@ -108,6 +108,13 @@ footer li {
 
 }
 
+@media screen and (min-width: 545px) {
+  .passenger_fields {
+    flex-direction: initial;
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (min-width: 907px) {
   .search_form {
     justify-content: center;
