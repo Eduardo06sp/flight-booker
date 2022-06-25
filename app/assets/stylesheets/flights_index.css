@@ -21,7 +21,7 @@
 .flight_results_container {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   padding: 15px 0;
 }
 
