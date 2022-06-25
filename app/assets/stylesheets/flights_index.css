@@ -50,8 +50,9 @@
   font-weight: bold;
 }
 
-.flight_results_form input[type="submit"] {
+.select_flight_button {
   font-size: 1.1rem;
+  height: 44px;
   width: 150px;
 }
 
