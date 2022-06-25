@@ -6,6 +6,7 @@
   <%= form.hidden_field :flight_id, { value: params[:flight_id] } %>
 
   <%= form.fields_for :passengers do |sub_form| %>
+    <p class="passenger_index">Passenger <%= sub_form.index + 1 %></p>
     <div class="passenger_fields">
       <div>
         <%= sub_form.label :first_name, 'First Name:' %>
