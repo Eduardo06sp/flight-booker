@@ -44,10 +44,73 @@ Flight.create(
     origin_id: 1,
     destination_id: 2
   }, {
+    departure_date: Date.new(2022, 6, 1),
+    departure_time: Time.new(2022, 6, 1, 15, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 1),
+    arrival_time: Time.new(2022, 6, 1, 18, 0, 0, '-05:00'),
+    available_seats: 3,
+
+    origin_id: 1,
+    destination_id: 2
+  }, {
+    departure_date: Date.new(2022, 6, 1),
+    departure_time: Time.new(2022, 6, 1, 19, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 1),
+    arrival_time: Time.new(2022, 6, 1, 22, 0, 0, '-05:00'),
+    available_seats: 1,
+
+    origin_id: 1,
+    destination_id: 2
+  }, {
+    departure_date: Date.new(2022, 6, 1),
+    departure_time: Time.new(2022, 6, 1, 20, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 1),
+    arrival_time: Time.new(2022, 6, 1, 23, 0, 0, '-05:00'),
+    available_seats: 1,
+
+    origin_id: 1,
+    destination_id: 2
+  }, {
+    departure_date: Date.new(2022, 6, 1),
+    departure_time: Time.new(2022, 6, 1, 0, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 1),
+    arrival_time: Time.new(2022, 6, 1, 3, 0, 0, '-05:00'),
+    available_seats: 1,
+
+    origin_id: 1,
+    destination_id: 2
+  }, {
+    departure_date: Date.new(2022, 6, 1),
+    departure_time: Time.new(2022, 6, 1, 2, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 1),
+    arrival_time: Time.new(2022, 6, 1, 5, 0, 0, '-05:00'),
+    available_seats: 1,
+
+    origin_id: 1,
+    destination_id: 2
+  }, {
+    departure_date: Date.new(2022, 6, 1),
+    departure_time: Time.new(2022, 6, 1, 4, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 1),
+    arrival_time: Time.new(2022, 6, 1, 7, 0, 0, '-05:00'),
+    available_seats: 1,
+
+    origin_id: 1,
+    destination_id: 2
+  }, {
     departure_date: Date.new(2022, 6, 5),
-    departure_time: Time.new(2022, 6, 1, 14, 0, 0, '-07:00'),
+    departure_time: Time.new(2022, 6, 1, 7, 0, 0, '-07:00'),
     arrival_date: Date.new(2022, 6, 5),
-    arrival_time: Time.new(2022, 6, 1, 17, 0, 0, '-05:00'),
+    arrival_time: Time.new(2022, 6, 1, 10, 0, 0, '-05:00'),
+    available_seats: 200,
+
+    origin_id: 1,
+    destination_id: 2
+  }, {
+    departure_date: Date.new(2022, 6, 5),
+    departure_time: Time.new(2022, 6, 1, 11, 0, 0, '-07:00'),
+    arrival_date: Date.new(2022, 6, 5),
+    arrival_time: Time.new(2022, 6, 1, 14, 0, 0, '-05:00'),
     available_seats: 200,
 
     origin_id: 1,
