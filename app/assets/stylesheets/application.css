@@ -90,3 +90,26 @@ footer ul {
 footer li {
   margin-top: 12px;
 }
+
+@media screen and (min-width: 427px) {
+  .search_form {
+    flex-direction: initial;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .search_form div:last-child {
+    align-self: end;
+  }
+
+  .search_button {
+    min-width: 140px;
+  }
+
+}
+
+@media screen and (min-width: 907px) {
+  .search_form {
+    justify-content: center;
+  }
+}
