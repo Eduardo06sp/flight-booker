@@ -17,11 +17,11 @@ class FlightsTest < ApplicationSystemTestCase
 
     click_on 'Search Flights'
 
-    find('.flight_results_form').assert_text 'LAX', count: 2
-    find('.flight_results_form').assert_text 'Los Angeles', count: 2
-    find('.flight_results_form').assert_text '06/01/22', count: 4
-    find('.flight_results_form').assert_text 'GDL', count: 2
-    find('.flight_results_form').assert_text 'Guadalajara', count: 2
+    find('.flight_results_container').assert_text 'LAX', count: 2
+    find('.flight_results_container').assert_text 'Los Angeles', count: 2
+    find('.flight_results_container').assert_text '06/01/22', count: 4
+    find('.flight_results_container').assert_text 'GDL', count: 2
+    find('.flight_results_container').assert_text 'Guadalajara', count: 2
 
     assert_text '07:00pm', count: 1
     assert_text '08:00pm', count: 1
