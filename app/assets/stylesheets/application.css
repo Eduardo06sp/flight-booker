@@ -109,6 +109,10 @@ footer li {
 }
 
 @media screen and (min-width: 545px) {
+  main {
+    line-height: 1.7;
+  }
+
   .passenger_fields {
     flex-direction: initial;
     flex-wrap: wrap;
