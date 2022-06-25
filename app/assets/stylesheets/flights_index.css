@@ -18,18 +18,18 @@
 
 /* FLIGHT RESULTS */
 
-.flight_results_form {
+.flight_results_container {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 15px 0;
 }
 
-.flight_results_form input {
+.flight_results_container input {
   height: 44px;
 }
 
-.flight_results_form input[type="radio"] {
+.flight_results_container input[type="radio"] {
   height: 18px;
   width: 18px;
 }
