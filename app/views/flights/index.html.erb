@@ -25,21 +25,23 @@
   </div>
 <% end %>
 
-<% if params[:commit] && @selected_flights.any? %>
-  <%= form_with url: new_booking_path, method: :get do |form| %>
+<%= turbo_frame_tag 'flight_results' do %>
+  <% if params[:commit] && @selected_flights.any? %>
+    <%= form_with url: new_booking_path, method: :get do |form| %>
 
-    <div class="flight_results_container">
-      <% @selected_flights.each do |flight| %>
-        <div class="flight_result_selection">
-          <input type="radio" id="flight_id_<%= flight.id %>" name="flight_id" value="<%= flight.id %>">
-          <label for="flight_id_<%= flight.id %>">
-            <%= render 'shared/flight_result', flight: flight %>
-          </label>
-        </div>
-      <% end %>
-    </div>
+      <div class="flight_results_container">
+        <% @selected_flights.each do |flight| %>
+          <div class="flight_result_selection">
+            <input type="radio" id="flight_id_<%= flight.id %>" name="flight_id" value="<%= flight.id %>">
+            <label for="flight_id_<%= flight.id %>">
+              <%= render 'shared/flight_result', flight: flight %>
+            </label>
+          </div>
+        <% end %>
+      </div>
 
-    <%= hidden_field_tag :passengers, params[:passengers] %>
-    <%= form.submit 'Select Flight', class: 'select_flight_button' %>
+      <%= hidden_field_tag :passengers, params[:passengers] %>
+      <%= form.submit 'Select Flight', class: 'select_flight_button' %>
+    <% end %>
   <% end %>
 <% end %>
