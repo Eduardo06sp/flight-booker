@@ -1,10 +1,10 @@
-<h2>Flight Confirmation</h2>
+<h2 class="confirmation_heading">Flight Confirmation</h2>
 
 <div class="bookings_show_flight_results">
   <%= render 'shared/flight_result', flight: @selected_flight %>
 </div>
 
-<h2>Passengers</h2>
+<h2 class="passengers_heading">Passengers</h2>
 <div class="passengers-info">
   <% @booking.passengers.each do |passenger| %>
     <div class="passenger-info">
