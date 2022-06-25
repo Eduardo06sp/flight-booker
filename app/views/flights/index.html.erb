@@ -2,7 +2,7 @@
 <%= form_with url: false,
   method: :get,
   class: 'search_form',
-  data: { turbo_frame: 'flight_results' } do |form| %>
+  data: { turbo_frame: 'flight_results', turbo_action: 'advance' } do |form| %>
   <div>
     <%= form.label :origin_id, 'Departing from:' %>
     <%= form.collection_select :origin_id, Airport.order(:name), :id, :name %>
