@@ -7,6 +7,8 @@
 .bookings_show_flight_results .arrival_result_info p:first-child {
   font-size: 1.3rem;
   font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 /* PASSENGERS INFO */
@@ -28,4 +30,6 @@
 .passenger_name {
   font-size: 1.3rem;
   font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
