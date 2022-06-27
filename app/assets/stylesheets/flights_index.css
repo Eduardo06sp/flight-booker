@@ -10,10 +10,17 @@
 }
 
 .search_form select,
-.search_form input {
+.search_button {
+  background-color: white;
+  border-color: #4d4d4d;
   font-size: 1.1rem;
   height: 44px;
   max-width: 250px;
+}
+
+.search_button {
+  background-color: #40798c;
+  color: white;
 }
 
 /* FLIGHT RESULTS */
@@ -35,7 +42,7 @@
 }
 
 .flight_result_selection {
-  border: 2px solid black;
+  border: 2px solid #4d4d4d;
   border-radius: 5px;
   display: flex;
   gap: 10px;
@@ -47,10 +54,14 @@
 }
 
 .flight_result_selection p:first-child {
+  color: #3c3c3c;
   font-weight: bold;
 }
 
 .select_flight_button {
+  background-color: #40798c;
+  border-color: #4d4d4d;
+  color: white;
   font-size: 1.1rem;
   height: 44px;
   width: 150px;
@@ -70,5 +81,5 @@
 
 .flight_result_container .result_airport_name,
 .flight_result_container .result_date {
-  color: rgba(0, 0, 0, 0.7);
+  color: #464646;
 }
