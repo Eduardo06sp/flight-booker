@@ -56,6 +56,8 @@
 .flight_result_selection p:first-child {
   color: #3c3c3c;
   font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 .select_flight_button {
