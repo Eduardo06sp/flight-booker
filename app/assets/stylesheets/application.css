@@ -38,6 +38,14 @@ body {
   padding: 15px;
 }
 
+a {
+  color: #444;
+}
+
+a:visited {
+  color: #836988;
+}
+
 /* HEADER */
 
 header {
@@ -60,6 +68,7 @@ header {
 
 .logo-and-text h1 {
   align-items: center;
+  color: #40798c;
   display: flex;
 }
 
@@ -71,6 +80,10 @@ header a {
 
 main {
   flex: 1;
+}
+
+h2 {
+  color: #4d4d4d;
 }
 
 main, footer {
@@ -104,6 +117,7 @@ footer li {
   }
 
   .search_button {
+    color: white;
     min-width: 140px;
   }
 
