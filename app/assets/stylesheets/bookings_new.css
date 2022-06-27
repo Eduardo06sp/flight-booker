@@ -1,6 +1,8 @@
 .new_booking_form .flight_result_container p:first-child {
   color: #3c3c3c;
   font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 .new_booking_form .flight_result_container {
@@ -14,7 +16,9 @@
 .passenger_index {
   font-size: 0.9rem;
   font-weight: bold;
+  text-decoration: underline;
   text-transform: uppercase;
+  text-underline-offset: 6px;
 }
 
 /* PASSENGER FIELDS */
