@@ -52,4 +52,10 @@ bin/rails test
 * Fast searching using Turbo Frames
 * Responsive design
 
+## Reporting Issues / Feedback / Contact
+Bug reports are greatly appreciated. You may create a new issue with a simple description of the problem, and any steps leading up to it.
+PRs are kindly appreciated.
+
+You may also email me at: eduardopelaez@pm.me
+
 You may see [the instructions for this project directly on The Odin Project's website](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker).
