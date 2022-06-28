@@ -10,7 +10,7 @@ Flight Booker is the easiest place to book your next flight! Visitors may search
 
 Bookings and passengers are created and saved simultaneously.
 
-This project was created using Rails 7 and Ruby 3.1.2. Minitest, Capybara, and Selenium were used to create system, integration, and functional tests. Search results are updated using Turbo Frames, which allows the app to target and update only the relevant part of the page. To avoid an excess amount of forms, passengers are created with bookings simultaneously through the use of nested forms.
+This project was created using Rails 7 and Ruby 3.1.2. Minitest, Capybara, and Selenium were used to create system, integration, and functional tests along with fixtures. Search results are updated using Turbo Frames, which allows the app to target and update only the relevant part of the page. To avoid an excess amount of forms, passengers are created with bookings simultaneously through the use of nested forms.
 
 ## Installing / Getting Started
 [Click here to view a live version in Heroku.](https://flight-book3r.herokuapp.com/)
