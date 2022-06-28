@@ -5,22 +5,22 @@
   data: { turbo_frame: 'flight_results', turbo_action: 'advance' } do |form| %>
   <div>
     <%= form.label :origin_id, 'Departing from:' %>
-    <%= form.collection_select :origin_id, Airport.order(:name), :id, :name %>
+    <%= form.collection_select :origin_id, Airport.order(:name), :id, :name, selected: 1 %>
   </div>
 
   <div>
     <%= form.label :destination_id, 'Arriving to:' %>
-    <%= form.collection_select :destination_id, Airport.order(:name).reverse, :id, :name %>
+    <%= form.collection_select :destination_id, Airport.order(:name).reverse, :id, :name, selected: 2 %>
   </div>
 
   <div>
     <%= form.label :passengers, 'Number of passengers:' %>
-    <%= form.select :passengers, (1..4).to_a %>
+    <%= form.select :passengers, (1..4).to_a, selected: 1 %>
   </div>
 
   <div>
     <%= form.label :departure_date, 'Departure date:' %>
-    <%= form.select :departure_date, options_from_collection_for_select(@flights.unique_departure_dates, :departure_date, :departure_date_formatted) %>
+    <%= form.select :departure_date, options_from_collection_for_select(@flights.unique_departure_dates, :departure_date, :departure_date_formatted, selected: '2024-06-01') %>
   </div>
 
   <div>
