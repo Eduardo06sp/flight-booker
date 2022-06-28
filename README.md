@@ -45,4 +45,11 @@ To exclude resource-heavy system tests, run:
 bin/rails test
 ```
 
+## Features
+* Nested forms to create multiple objects with a single submission
+* Database seeds to populate application with sample, starter data
+* System, integration & functional tests to ensure proper application functionality
+* Fast searching using Turbo Frames
+* Responsive design
+
 You may see [the instructions for this project directly on The Odin Project's website](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker).
