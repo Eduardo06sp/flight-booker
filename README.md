@@ -30,4 +30,19 @@ bin/rails server
 
 Then visit http://localhost:3000/ to view the application.
 
+### Running System / Integration / Functional Tests
+> Prerequisites:
+>
+> FireFox >= 101 (may work on older versions)
+
+Within the cloned `flight-booker` folder, run:
+```bash
+bin/rails test:all
+```
+
+To exclude resource-heavy system tests, run:
+```bash
+bin/rails test
+```
+
 You may see [the instructions for this project directly on The Odin Project's website](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker).
