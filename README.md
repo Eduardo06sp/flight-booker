@@ -58,4 +58,12 @@ PRs are kindly appreciated.
 
 You may also email me at: eduardopelaez@pm.me
 
-You may see [the instructions for this project directly on The Odin Project's website](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker).
+## Acknowledgements
+
+* [The Odin Project](https://www.theodinproject.com/home), the best resource I have come across for learning full-stack web development
+  - For providing the idea for this project ([see the instructions for this project here!](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker))
+  - For their absolutely wonderful Discord community
+
+* The Noun Project [artist Phạm Thanh Lộc](https://thenounproject.com/thanhloc1009/) for [the "Plane" art](https://thenounproject.com/icon/plane-2322367/) (used as a favicon)
+
+* The Noun Project [artist Whales Factory](https://thenounproject.com/whales.factory/) for [the "Flight On" art](https://thenounproject.com/icon/flight-on-4179048/) (used as a logo)
