@@ -1,5 +1,5 @@
 # Flight Booker
-![A screenshot displaying the website with flight results](https://i.postimg.cc/cZBgq5C2/Screenshot-from-2022-06-28-01-07-29.png)
+![A screenshot displaying the website with flight results](https://i.postimg.cc/VvzMmZZt/Screenshot-from-2022-06-28-21-38-06.png)
 
 > **NOTE:** Due to Heroku's aggressive sleep configuration for web dynos, initial load time may be longer than expected.
 
