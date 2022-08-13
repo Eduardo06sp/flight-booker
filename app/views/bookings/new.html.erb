@@ -4,7 +4,7 @@
 
   <%= render 'shared/flight_result', flight: @selected_flight %>
 
-  <%= form.hidden_field :flight_id, { value: params[:flight_id] } %>
+  <%= form.hidden_field :flight_id, { value: @selected_flight.id } %>
 
   <%= form.fields_for :passengers do |sub_form| %>
     <p class="passenger_index">Passenger <%= sub_form.index + 1 %></p>
