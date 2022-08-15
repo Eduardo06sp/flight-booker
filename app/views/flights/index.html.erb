@@ -14,11 +14,6 @@
   </div>
 
   <div>
-    <%= form.label :passengers, 'Number of passengers:' %>
-    <%= form.select :passengers, (1..4).to_a, selected: 1 %>
-  </div>
-
-  <div>
     <%= form.label :departure_date, 'Departure date:' %>
     <%= form.select :departure_date, options_from_collection_for_select(@flights.unique_departure_dates, :departure_date, :departure_date_formatted, selected: '2024-06-01') %>
   </div>
@@ -43,7 +38,6 @@
         <% end %>
       </div>
 
-      <%= hidden_field_tag :passengers, params[:passengers] %>
       <%= form.submit 'Select Flight',
         class: 'select_flight_button',
         data: { turbo_frame: '_top' } %>
