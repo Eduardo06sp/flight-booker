@@ -6,44 +6,54 @@
 
   <%= form.hidden_field :flight_id, { value: @selected_flight.id } %>
 
-  <%= form.fields_for :passengers do |sub_form| %>
-    <p class="passenger_index">Passenger <%= sub_form.index + 1 %></p>
+  <template>
+    <p class="passenger_index">Passenger 1</p>
     <div class="passenger_fields">
       <div>
-        <%= sub_form.label :first_name, 'First Name:' %>
-        <%= sub_form.text_field :first_name,
-          maxlength: 100,
-          pattern: '[A-Za-z ]+',
-          title: 'First name should only contain letters/spaces.',
-          required: true %>
+        <label for="booking_passengers_attributes_0_first_name">First Name: </label>
+        <input id="booking_passengers_attributes_0_first_name"
+               maxlength="100"
+               pattern="[A-Za-z ]+"
+               title="First name should only contain letters/spaces."
+               required="required"
+               size="100"
+               type="text"
+               name="booking[passengers_attributes][0][first_name]">
       </div>
 
       <div>
-        <%= sub_form.label :last_name, 'Last Name:' %>
-        <%= sub_form.text_field :last_name,
-          maxlength: 100,
-          pattern: '[A-Za-z ]+',
-          title: 'Last name should only contain letters/spaces.',
-          required: true %>
+        <label for="booking_passengers_attributes_0_last_name">Last Name: </label>
+        <input id="booking_passengers_attributes_0_last_name"
+               maxlength="100"
+               pattern="[A-Za-z ]+"
+               title="Last name should only contain letters/spaces."
+               required="required"
+               size="100"
+               type="text"
+               name="booking[passengers_attributes][0][last_name]">
       </div>
 
       <div>
-        <%= sub_form.label :email, 'Email:' %>
-        <%= sub_form.email_field :email,
-          placeholder: 'peter@example.com',
-          required: true %>
+        <label for="booking_passengers_attributes_0_email">Email: </label>
+        <input id="booking_passengers_attributes_0_email"
+               placeholder="peter@example.com"
+               required="required"
+               type="email"
+               name="booking[passengers_attributes][0][email]">
       </div>
 
       <div>
-        <%= sub_form.label :phone_number, 'Phone number:' %>
-        <%= sub_form.telephone_field :phone_number,
-          required: true,
-          title: 'Phone number should be in the format: 1112223333, 111-222-3333, or (111)222-3333. There may be a space after the area code.',
-          pattern: '^\(?\d{3}[)-]?\s?\d{3}-?\d{4}$',
-          placeholder: '111-222-3333' %>
+        <label for="booking_passengers_attributes_0_phone_number">Phone Number: </label>
+        <input id="booking_passengers_attributes_0_phone_number"
+               required="required"
+               title="Phone number should be in the format: 1112223333, 111-222-3333, or (111)222-3333. There may be a space after the area code."
+               pattern="^\(?\d{3}[)-]?\s?\d{3}-?\d{4}$"
+               placeholder="111-222-3333"
+               type="tel"
+               name="booking[passengers_attributes][0][phone_number]">
       </div>
     </div>
-  <% end %>
+  </template>
 
   <div>
     <%= form.submit %>
