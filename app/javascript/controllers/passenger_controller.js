@@ -3,11 +3,19 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="passenger"
 export default class extends Controller {
   static targets = ['passengerForm', 'addPassengerButton'];
+  static values = { passengerCount: Number, maxPassengerCount: Number }
 
-  connect() {
+  initialize() {
+    this.addPassengerFields();
   }
 
   addPassengerFields() {
+    if (this.passengerCountValue >= this.maxPassengerCountValue) {
+      return;
+    }
+
+    this.passengerCountValue++;
+
     const passengerForm = this.passengerFormTarget.content.cloneNode(true);
     const passengerLabels = passengerForm.querySelectorAll('label');
     const passengerInputs = passengerForm.querySelectorAll('input');

@@ -1,7 +1,8 @@
 <% content_for :title, 'Book Flight' %>
 <h2>Book Flight</h2>
 <%= form_with model: @booking, class: 'new_booking_form', data: {
-  controller: 'passenger'
+  controller: 'passenger',
+  'passenger-max-passenger-count-value': @selected_flight.available_seats
 } do |form| %>
 
   <%= render 'shared/flight_result', flight: @selected_flight %>
