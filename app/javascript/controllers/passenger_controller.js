@@ -19,12 +19,15 @@ export default class extends Controller {
     const passengerForm = this.passengerFormTarget.content.cloneNode(true);
     const passengerLabels = passengerForm.querySelectorAll('label');
     const passengerInputs = passengerForm.querySelectorAll('input');
+    const passengerCount = passengerForm.querySelector('.passenger_index');
     const currentTime = Date.now();
 
     const generateUniqueValue = function(element, attribute) {
       const currentAttributeValue = element.getAttribute(attribute);
       return currentAttributeValue.replace('0', currentTime);
     };
+
+    passengerCount.textContent = `Pasenger ${this.passengerCountValue}`;
 
     passengerLabels.forEach((label) => label.setAttribute('for', generateUniqueValue(label, 'for')));
     passengerInputs.forEach((input) => input.setAttribute('id', generateUniqueValue(input, 'id')));
