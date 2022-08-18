@@ -11,7 +11,6 @@ class FlightsControllerTest < ActionDispatch::IntegrationTest
       origin_id: airports(:guadalajaraairport).id,
       destination_id: airports(:riodejaneiroairport).id,
       departure_date: '2022-06-01',
-      passengers: '3',
       commit: 'Search Flights'
     }
     assert_response :success
@@ -32,7 +31,6 @@ class FlightsControllerTest < ActionDispatch::IntegrationTest
       origin_id: airports(:riodejaneiroairport).id,
       destination_id: airports(:losangelesairport).id,
       departure_date: '2022-06-02',
-      passengers: '3',
       commit: 'Search Flights'
     }
     assert_response :success
