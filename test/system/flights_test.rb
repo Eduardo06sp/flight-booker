@@ -12,7 +12,6 @@ class FlightsTest < ApplicationSystemTestCase
 
     select 'Los Angeles', from: 'origin_id'
     select 'Guadalajara', from: 'destination_id'
-    select '4', from: 'passengers'
     select '06/01/22', from: 'departure_date'
 
     click_on 'Search Flights'
@@ -34,7 +33,7 @@ class FlightsTest < ApplicationSystemTestCase
     origin_airport = airports(:losangelesairport).id
     destination_airport = airports(:guadalajaraairport).id
     secondflight = flights(:secondflight).id
-    visit "/?origin_id=#{origin_airport}&destination_id=#{destination_airport}&passengers=2&departure_date=2022-06-01&commit=Search+Flights"
+    visit "/?origin_id=#{origin_airport}&destination_id=#{destination_airport}&departure_date=2022-06-01&commit=Search+Flights"
 
     choose("flight_id_#{secondflight}")
     click_on('Select Flight')
