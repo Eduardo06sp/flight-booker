@@ -16,7 +16,6 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
   test 'should display new bookings view with selected flight' do
     get new_booking_path, params: {
       flight_id: flights(:fourthflight).id,
-      passengers: '2',
       commit: 'Save '
     }
     assert_response :success
@@ -28,7 +27,6 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
   test 'should display 8 passenger inputs for 2 passengers' do
     get new_booking_path, params: {
       flight_id: flights(:fourthflight).id,
-      passengers: '2',
       commit: 'Save '
     }
     assert_response :success
@@ -39,7 +37,6 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
   test 'should display 4 passenger inputs for 1 passenger' do
     get new_booking_path, params: {
       flight_id: flights(:fourthflight).id,
-      passengers: '1',
       commit: 'Save '
     }
     assert_response :success
@@ -50,7 +47,6 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
   test 'should display 16 inputs regarding 4 passengers' do
     get new_booking_path, params: {
       flight_id: flights(:thirdflight).id,
-      passengers: '4',
       commit: 'Save '
     }
     assert_response :success
