@@ -10,6 +10,6 @@ class AirportTest < ActiveSupport::TestCase
   test 'should associate arriving flights to Guadalajara airport' do
     guadalajara_airport = airports(:guadalajaraairport)
     guadalajara_arrivals = guadalajara_airport.arriving_flights
-    assert_equal 2, guadalajara_arrivals.count
+    assert_equal 3, guadalajara_arrivals.count
   end
 end
