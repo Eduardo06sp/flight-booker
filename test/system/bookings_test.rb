@@ -6,7 +6,7 @@ class BookingsTest < ApplicationSystemTestCase
     destination_airport = airports(:guadalajaraairport).id
     secondflight = flights(:secondflight).id
 
-    visit "bookings/new?flight_id=#{secondflight}&passengers=2&commit=Save+"
+    visit "bookings/new?flight_id=#{secondflight}&commit=Save+"
     assert_current_path '/bookings/new', ignore_query: true
 
     first_passenger = {
