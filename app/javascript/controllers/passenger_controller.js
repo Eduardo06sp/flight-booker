@@ -27,7 +27,7 @@ export default class extends Controller {
       return currentAttributeValue.replace('0', currentTime);
     };
 
-    passengerCount.textContent = `Pasenger ${this.passengerCountValue}`;
+    passengerCount.textContent = `Passenger ${this.passengerCountValue}`;
 
     passengerLabels.forEach((label) => label.setAttribute('for', generateUniqueValue(label, 'for')));
     passengerInputs.forEach((input) => input.setAttribute('id', generateUniqueValue(input, 'id')));
