@@ -13,30 +13,53 @@ class BookingsTest < ApplicationSystemTestCase
     click_on('Add Passenger')
     assert_text 'PASSENGER 2'
 
+    passenger_fields = all('.passenger_fields')
     first_passenger = {
-      field: 'booking_passengers_attributes_0',
+      fields: passenger_fields[0].all('input'),
       first_name: 'Velma',
       last_name: 'Dinkley',
       email: 'velma@scooby.do',
       phone_number: '1234567890'
     }
     second_passenger = {
-      field: 'booking_passengers_attributes_1',
+      fields: passenger_fields[1].all('input'),
       first_name: 'Daphne',
       last_name: 'Blake',
       email: 'daphne@scooby.do',
       phone_number: '9876543219'
     }
 
-    fill_in "#{first_passenger[:field]}_first_name", with: first_passenger[:first_name]
-    fill_in "#{first_passenger[:field]}_last_name", with: first_passenger[:last_name]
-    fill_in "#{first_passenger[:field]}_email", with: first_passenger[:email]
-    fill_in "#{first_passenger[:field]}_phone_number", with: first_passenger[:phone_number]
+    within first_passenger[:fields][0] do
+      fill_in with: first_passenger[:first_name]
+    end
 
-    fill_in "#{second_passenger[:field]}_first_name", with: second_passenger[:first_name]
-    fill_in "#{second_passenger[:field]}_last_name", with: second_passenger[:last_name]
-    fill_in "#{second_passenger[:field]}_email", with: second_passenger[:email]
-    fill_in "#{second_passenger[:field]}_phone_number", with: second_passenger[:phone_number]
+    within first_passenger[:fields][1] do
+      fill_in with: first_passenger[:last_name]
+    end
+
+    within first_passenger[:fields][2] do
+      fill_in with: first_passenger[:email]
+    end
+
+    within first_passenger[:fields][3] do
+      fill_in with: first_passenger[:phone_number]
+    end
+
+    within second_passenger[:fields][0] do
+      fill_in with: second_passenger[:first_name]
+    end
+
+    within second_passenger[:fields][1] do
+      fill_in with: second_passenger[:last_name]
+    end
+
+    within second_passenger[:fields][2] do
+      fill_in with: second_passenger[:email]
+    end
+
+    within second_passenger[:fields][3] do
+      fill_in with: second_passenger[:phone_number]
+    end
 
     click_on('Create Booking')
 
