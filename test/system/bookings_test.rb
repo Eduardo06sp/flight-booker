@@ -9,6 +9,10 @@ class BookingsTest < ApplicationSystemTestCase
     visit "bookings/new?flight_id=#{secondflight}&commit=Select+Flight"
     assert_current_path '/bookings/new', ignore_query: true
 
+    assert_text 'PASSENGER 1'
+    click_on('Add Passenger')
+    assert_text 'PASSENGER 2'
+
     first_passenger = {
       field: 'booking_passengers_attributes_0',
       first_name: 'Velma',
