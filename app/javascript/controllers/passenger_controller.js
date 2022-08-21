@@ -9,6 +9,15 @@ export default class extends Controller {
     this.addPassengerFields();
   }
 
+  setUniqueValues(elements, attribute, value) {
+    elements.forEach((element) => {
+      const currentAttributeValue = element.getAttribute(attribute);
+      const newAttributeValue = currentAttributeValue.replace('0', value);
+
+      element.setAttribute(attribute, newAttributeValue);
+    });
+  }
+
   addPassengerFields() {
     if (this.passengerCountValue >= this.maxPassengerCountValue) {
       return;
@@ -22,16 +31,11 @@ export default class extends Controller {
     const passengerCount = passengerForm.querySelector('.passenger_index');
     const currentTime = Date.now();
 
-    const generateUniqueValue = function(element, attribute) {
-      const currentAttributeValue = element.getAttribute(attribute);
-      return currentAttributeValue.replace('0', currentTime);
-    };
-
     passengerCount.textContent = `Passenger ${this.passengerCountValue}`;
 
-    passengerLabels.forEach((label) => label.setAttribute('for', generateUniqueValue(label, 'for')));
-    passengerInputs.forEach((input) => input.setAttribute('id', generateUniqueValue(input, 'id')));
-    passengerInputs.forEach((input) => input.setAttribute('name', generateUniqueValue(input, 'name')));
+    this.setUniqueValues(passengerLabels, 'for', currentTime);
+    this.setUniqueValues(passengerInputs, 'id', currentTime);
+    this.setUniqueValues(passengerInputs, 'name', currentTime);
 
     this.addPassengerButtonTarget.before(passengerForm);
   }
