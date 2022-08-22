@@ -42,10 +42,45 @@
   padding-left: 4px;
 }
 
+.passenger_fields:nth-last-child(2) {
+  margin-bottom: 10px;
+}
+
+.add_passenger_button::before {
+  background: 20% / 50% no-repeat url(plus_icon.png);
+  background-size: 100%;
+  content: '';
+  display: inline-block;
+  height: 28px;
+  width: 28px;
+}
+
+.add_passenger_button {
+  align-items: center;
+  background: none;
+  border: 4px solid #40798c;
+  display: flex;
+  font-size: 1.1rem;
+  gap: 5px;
+  height: 44px;
+  justify-content: center;
+  width: 100%;
+}
+
+.new_booking_form > div:last-child {
+  margin-top: 50px;
+}
+
 .new_booking_form input[type="submit"] {
   background-color: #40798c;
   color: white;
   font-size: 1.1rem;
   height: 44px;
   width: 165px;
+}
+
+@media screen and (min-width: 1200px) {
+  .add_passenger_button {
+    width: 1200px;
+  }
 }
