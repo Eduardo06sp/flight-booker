@@ -69,3 +69,5 @@ You may also email me at: eduardopelaez@pm.me
 * The Noun Project [artist Phạm Thanh Lộc](https://thenounproject.com/thanhloc1009/) for [the "Plane" art](https://thenounproject.com/icon/plane-2322367/) (used as a favicon)
 
 * The Noun Project [artist Whales Factory](https://thenounproject.com/whales.factory/) for [the "Flight On" art](https://thenounproject.com/icon/flight-on-4179048/) (used as a logo)
+
+* Flaticon [artist Kliwir Art](https://www.flaticon.com/authors/kliwir-art) for [the plus icon art](https://www.flaticon.com/premium-icon/plus_4315609?term=plus&page=1&position=6&page=1&position=6&related_id=4315609&origin=tag) (used in the button to add passengers)
