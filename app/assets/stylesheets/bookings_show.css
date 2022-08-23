@@ -33,3 +33,7 @@
   text-decoration: underline;
   text-underline-offset: 6px;
 }
+
+.bookings_show_flight_results .available_passenger_info {
+  display: none;
+}

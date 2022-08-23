@@ -13,4 +13,7 @@
     <p><%= flight.arrival_time_formatted %></p>
     <p class="result_date"><%= flight.arrival_date_formatted %></p>
   </div>
+  <div class="available_passenger_info">
+    <p><%= pluralize(flight.available_seats, 'seat') %> available</p>
+  </div>
 </div>
