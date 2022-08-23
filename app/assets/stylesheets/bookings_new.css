@@ -59,6 +59,7 @@
   align-items: center;
   background: none;
   border: 4px solid #40798c;
+  cursor: pointer;
   display: flex;
   font-size: 1.1rem;
   gap: 5px;
@@ -74,6 +75,7 @@
 .new_booking_form input[type="submit"] {
   background-color: #40798c;
   color: white;
+  cursor: pointer;
   font-size: 1.1rem;
   height: 44px;
   width: 165px;
