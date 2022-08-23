@@ -68,6 +68,11 @@
   width: 100%;
 }
 
+.add_passenger_button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
 .new_booking_form > div:last-child {
   margin-top: 50px;
 }

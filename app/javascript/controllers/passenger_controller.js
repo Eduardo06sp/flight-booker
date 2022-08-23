@@ -18,6 +18,10 @@ export default class extends Controller {
     });
   }
 
+  disableAddPassengerButton() {
+    this.addPassengerButtonTarget.disabled = true;
+  }
+
   addPassengerFields() {
     if (this.passengerCountValue >= this.maxPassengerCountValue) {
       return;
@@ -38,5 +42,9 @@ export default class extends Controller {
     this.setUniqueValues(passengerInputs, 'name', currentTime);
 
     this.addPassengerButtonTarget.before(passengerForm);
+
+    if (this.passengerCountValue >= this.maxPassengerCountValue) {
+      this.disableAddPassengerButton();
+    }
   }
 }
