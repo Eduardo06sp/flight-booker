@@ -47,7 +47,7 @@
 }
 
 .add_passenger_button::before {
-  background: 20% / 50% no-repeat url(plus_icon.png);
+  background: 20% / 50% no-repeat url(plus-icon.png);
   background-size: 100%;
   content: '';
   display: inline-block;
