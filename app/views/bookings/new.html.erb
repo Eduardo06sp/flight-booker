@@ -10,55 +10,57 @@
   <%= form.hidden_field :flight_id, { value: @selected_flight.id } %>
 
   <template data-passenger-target="passengerForm">
-    <div class="passenger_header">
-      <p class="passenger_index">Passenger 1</p>
-      <div class="remove_passenger_button">
-        <%= image_tag 'minus-icon.png', alt: 'Remove passenger button' %>
+    <div class="passenger_container">
+      <div class="passenger_header">
+        <p class="passenger_index">Passenger 1</p>
+        <div class="remove_passenger_button">
+          <%= image_tag 'minus-icon.png', alt: 'Remove passenger button' %>
+        </div>
       </div>
-    </div>
-    <div class="passenger_fields">
-      <div>
-        <label for="booking_passengers_attributes_0_first_name">First Name: </label>
-        <input id="booking_passengers_attributes_0_first_name"
-               maxlength="100"
-               pattern="[A-Za-z ]+"
-               title="First name should only contain letters/spaces."
-               required="required"
-               size="100"
-               type="text"
-               name="booking[passengers_attributes][0][first_name]">
-      </div>
+      <div class="passenger_fields">
+        <div>
+          <label for="booking_passengers_attributes_0_first_name">First Name: </label>
+          <input id="booking_passengers_attributes_0_first_name"
+                 maxlength="100"
+                 pattern="[A-Za-z ]+"
+                 title="First name should only contain letters/spaces."
+                 required="required"
+                 size="100"
+                 type="text"
+                 name="booking[passengers_attributes][0][first_name]">
+        </div>
 
-      <div>
-        <label for="booking_passengers_attributes_0_last_name">Last Name: </label>
-        <input id="booking_passengers_attributes_0_last_name"
-               maxlength="100"
-               pattern="[A-Za-z ]+"
-               title="Last name should only contain letters/spaces."
-               required="required"
-               size="100"
-               type="text"
-               name="booking[passengers_attributes][0][last_name]">
-      </div>
+        <div>
+          <label for="booking_passengers_attributes_0_last_name">Last Name: </label>
+          <input id="booking_passengers_attributes_0_last_name"
+                 maxlength="100"
+                 pattern="[A-Za-z ]+"
+                 title="Last name should only contain letters/spaces."
+                 required="required"
+                 size="100"
+                 type="text"
+                 name="booking[passengers_attributes][0][last_name]">
+        </div>
 
-      <div>
-        <label for="booking_passengers_attributes_0_email">Email: </label>
-        <input id="booking_passengers_attributes_0_email"
-               placeholder="peter@example.com"
-               required="required"
-               type="email"
-               name="booking[passengers_attributes][0][email]">
-      </div>
+        <div>
+          <label for="booking_passengers_attributes_0_email">Email: </label>
+          <input id="booking_passengers_attributes_0_email"
+                 placeholder="peter@example.com"
+                 required="required"
+                 type="email"
+                 name="booking[passengers_attributes][0][email]">
+        </div>
 
-      <div>
-        <label for="booking_passengers_attributes_0_phone_number">Phone Number: </label>
-        <input id="booking_passengers_attributes_0_phone_number"
-               required="required"
-               title="Phone number should be in the format: 1112223333, 111-222-3333, or (111)222-3333. There may be a space after the area code."
-               pattern="^\(?\d{3}[)-]?\s?\d{3}-?\d{4}$"
-               placeholder="111-222-3333"
-               type="tel"
-               name="booking[passengers_attributes][0][phone_number]">
+        <div>
+          <label for="booking_passengers_attributes_0_phone_number">Phone Number: </label>
+          <input id="booking_passengers_attributes_0_phone_number"
+                 required="required"
+                 title="Phone number should be in the format: 1112223333, 111-222-3333, or (111)222-3333. There may be a space after the area code."
+                 pattern="^\(?\d{3}[)-]?\s?\d{3}-?\d{4}$"
+                 placeholder="111-222-3333"
+                 type="tel"
+                 name="booking[passengers_attributes][0][phone_number]">
+        </div>
       </div>
     </div>
   </template>
