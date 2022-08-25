@@ -10,7 +10,12 @@
   <%= form.hidden_field :flight_id, { value: @selected_flight.id } %>
 
   <template data-passenger-target="passengerForm">
-    <p class="passenger_index">Passenger 1</p>
+    <div class="passenger_header">
+      <p class="passenger_index">Passenger 1</p>
+      <div class="remove_passenger_button">
+        <%= image_tag 'minus-icon.png', alt: 'Remove passenger button' %>
+      </div>
+    </div>
     <div class="passenger_fields">
       <div>
         <label for="booking_passengers_attributes_0_first_name">First Name: </label>
