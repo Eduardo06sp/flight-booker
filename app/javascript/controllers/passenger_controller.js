@@ -54,6 +54,10 @@ export default class extends Controller {
   }
 
   remove(e) {
+    if (this.passengerCountValue === 1) {
+      return;
+    }
+
     const removeButton = e.currentTarget;
     const targetId = removeButton.dataset.passengerContainer;
     const passengerContainer = document.getElementById(targetId);
