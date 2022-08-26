@@ -59,5 +59,7 @@ export default class extends Controller {
     const passengerContainer = document.getElementById(targetId);
 
     passengerContainer.remove();
+
+    this.passengerCountValue--;
   }
 }
