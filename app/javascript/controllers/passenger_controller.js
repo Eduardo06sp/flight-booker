@@ -52,4 +52,12 @@ export default class extends Controller {
       this.disableAddPassengerButton();
     }
   }
+
+  remove(e) {
+    const removeButton = e.currentTarget;
+    const targetId = removeButton.dataset.passengerContainer;
+    const passengerContainer = document.getElementById(targetId);
+
+    passengerContainer.remove();
+  }
 }
