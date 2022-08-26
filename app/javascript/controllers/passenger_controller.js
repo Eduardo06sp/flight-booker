@@ -30,10 +30,15 @@ export default class extends Controller {
     this.passengerCountValue++;
 
     const passengerForm = this.passengerFormTarget.content.cloneNode(true);
+    const passengerContainer = passengerForm.querySelector('.passenger_container');
+    const passengerRemoveButton = passengerForm.querySelector('.remove_passenger_button');
     const passengerLabels = passengerForm.querySelectorAll('label');
     const passengerInputs = passengerForm.querySelectorAll('input');
     const passengerCount = passengerForm.querySelector('.passenger_index');
     const currentTime = Date.now();
+
+    passengerContainer.setAttribute('id', `passenger_container_${this.passengerCountValue}`);
+    passengerRemoveButton.setAttribute('data-passenger-container', `passenger_container_${this.passengerCountValue}`);
 
     passengerCount.textContent = `Passenger ${this.passengerCountValue}`;
 
