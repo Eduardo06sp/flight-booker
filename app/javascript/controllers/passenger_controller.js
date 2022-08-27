@@ -94,8 +94,14 @@ export default class extends Controller {
     const removeButton = e.currentTarget;
     const targetId = removeButton.dataset.passengerContainer;
     const passengerContainer = document.getElementById(targetId);
+    const passenger = passengerContainer.querySelector('.passenger_index').textContent;
+    const confirmation = window.confirm(`Are you sure you want to delete ${passenger}?`);
 
-    passengerContainer.remove();
+    if (confirmation) {
+      passengerContainer.remove();
+    } else {
+      return;
+    }
 
     this.passengerCountValue--;
 
