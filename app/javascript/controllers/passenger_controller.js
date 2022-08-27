@@ -51,6 +51,17 @@ export default class extends Controller {
     if (this.passengerCountValue >= this.maxPassengerCountValue) {
       this.disableAddPassengerButton();
     }
+
+    if (this.passengerCountValue > 1) {
+      return;
+    } else {
+      this.disableRemoveButton();
+    }
+  }
+
+  disableRemoveButton() {
+    const removePassengerButton = document.querySelector('.remove_passenger_button');
+    removePassengerButton.classList.add('disabled');
   }
 
   remove(e) {
@@ -65,5 +76,9 @@ export default class extends Controller {
     passengerContainer.remove();
 
     this.passengerCountValue--;
+
+    if (this.passengerCountValue === 1) {
+      this.disableRemoveButton();
+    }
   }
 }
