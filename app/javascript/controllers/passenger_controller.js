@@ -69,6 +69,23 @@ export default class extends Controller {
     disabledRemoveButton.classList.remove('disabled');
   }
 
+  reorderPassengers() {
+    const passengerHeadings = document.querySelectorAll('.passenger_index');
+
+    passengerHeadings.forEach(
+      function(heading, i) {
+        const currentCount = i + 1;
+        const reorderedHeading = `Passenger ${currentCount}`;
+
+        if (heading.textContent === reorderedHeading) {
+          return;
+        } else {
+          heading.textContent = reorderedHeading;
+        }
+      }
+    );
+  }
+
   remove(e) {
     if (this.passengerCountValue === 1) {
       return;
@@ -81,6 +98,8 @@ export default class extends Controller {
     passengerContainer.remove();
 
     this.passengerCountValue--;
+
+    this.reorderPassengers();
 
     if (this.passengerCountValue === 1) {
       this.disableRemoveButton();
