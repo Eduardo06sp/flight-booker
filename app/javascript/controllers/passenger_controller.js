@@ -37,8 +37,8 @@ export default class extends Controller {
     const passengerCount = passengerForm.querySelector('.passenger_index');
     const currentTime = Date.now();
 
-    passengerContainer.setAttribute('id', `passenger_container_${this.passengerCountValue}`);
-    passengerRemoveButton.setAttribute('data-passenger-container', `passenger_container_${this.passengerCountValue}`);
+    passengerContainer.setAttribute('id', `passenger_container_${currentTime}`);
+    passengerRemoveButton.setAttribute('data-passenger-container', `passenger_container_${currentTime}`);
 
     passengerCount.textContent = `Passenger ${this.passengerCountValue}`;
 
