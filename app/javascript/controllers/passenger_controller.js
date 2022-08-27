@@ -53,7 +53,7 @@ export default class extends Controller {
     }
 
     if (this.passengerCountValue > 1) {
-      return;
+      this.reenableRemoveButton();
     } else {
       this.disableRemoveButton();
     }
@@ -62,6 +62,11 @@ export default class extends Controller {
   disableRemoveButton() {
     const removePassengerButton = document.querySelector('.remove_passenger_button');
     removePassengerButton.classList.add('disabled');
+  }
+
+  reenableRemoveButton() {
+    const disabledRemoveButton = document.querySelector('.remove_passenger_button.disabled');
+    disabledRemoveButton.classList.remove('disabled');
   }
 
   remove(e) {
@@ -79,6 +84,8 @@ export default class extends Controller {
 
     if (this.passengerCountValue === 1) {
       this.disableRemoveButton();
+    } else {
+      this.reenableRemoveButton();
     }
   }
 }
