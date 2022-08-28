@@ -22,6 +22,10 @@ export default class extends Controller {
     this.addPassengerButtonTarget.disabled = true;
   }
 
+  reenablePassengerButton() {
+    this.addPassengerButtonTarget.disabled = false;
+  }
+
   addPassengerFields() {
     if (this.passengerCountValue >= this.maxPassengerCountValue) {
       return;
@@ -95,6 +99,10 @@ export default class extends Controller {
       passengerContainer.remove();
     } else {
       return;
+    }
+
+    if (document.querySelector('.add_passenger_button:disabled')) {
+      this.reenablePassengerButton();
     }
 
     this.passengerCountValue--;
