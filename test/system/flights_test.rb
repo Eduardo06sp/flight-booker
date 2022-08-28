@@ -24,8 +24,11 @@ class FlightsTest < ApplicationSystemTestCase
 
     assert_text '07:00pm', count: 1
     assert_text '08:00pm', count: 1
+    assert_text '20 seats available', count: 1
+
     assert_text '09:00pm', count: 1
     assert_text '10:00pm', count: 1
+    assert_text '200 seats available', count: 1
   end
 
   test 'selecting flight result redirects to new Booking path' do
