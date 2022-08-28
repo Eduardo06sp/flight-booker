@@ -130,5 +130,50 @@ class BookingsTest < ApplicationSystemTestCase
     assert_selector '.remove_passenger_button.disabled'
     find('.remove_passenger_button').click
     assert_selector 'input', count: 5
+
+    # fill the fields out, then submit
+    # verify proper details in confirmation page
+    passenger = {
+      fields: all('input'),
+      first_name: 'Kim',
+      last_name: 'Possible',
+      email: 'kim@unstoppab.le',
+      phone_number: '0121234567'
+    }
+
+    within passenger[:fields][0] do
+      fill_in with: passenger[:first_name]
+    end
+
+    within passenger[:fields][1] do
+      fill_in with: passenger[:last_name]
+    end
+
+    within passenger[:fields][2] do
+      fill_in with: passenger[:email]
+    end
+
+    within passenger[:fields][3] do
+      fill_in with: passenger[:phone_number]
+    end
+
+    click_on('Create Booking')
+
+    within('.flight_result_container') do
+      assert_text 'SDU', count: 1
+      assert_text 'Rio de Janeiro', count: 1
+      assert_text '04:00pm', count: 1
+
+      assert_text '06/02/22', count: 2
+
+      assert_text 'LAX', count: 1
+      assert_text 'Los Angeles', count: 1
+      assert_text '05:00pm', count: 1
+    end
+
+    assert_text passenger[:first_name], count: 1
+    assert_text passenger[:last_name], count: 1
+    assert_text passenger[:email], count: 1
+    assert_text passenger[:phone_number], count: 1
   end
 end
