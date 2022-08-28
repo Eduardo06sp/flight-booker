@@ -106,5 +106,22 @@ class BookingsTest < ApplicationSystemTestCase
     assert_no_selector '.remove_passenger_button.disabled'
 
     assert_selector '.add_passenger_button:disabled'
+
+    # removing a field
+    # cancelling will not affect any fields
+    # accepting will actually remove the fields
+    removal_buttons = all('.remove_passenger_button')
+
+    confirmation = dismiss_confirm do
+      removal_buttons[0].click
+    end
+
+    assert_equal confirmation, 'Are you sure you want to delete Passenger 1?'
+
+    accept_confirm do
+      removal_buttons[0].click
+    end
+
+    assert_selector 'input', count: 5
   end
 end
