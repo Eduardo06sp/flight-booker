@@ -83,4 +83,17 @@ class BookingsTest < ApplicationSystemTestCase
     assert_text second_passenger[:email], count: 1
     assert_text second_passenger[:phone_number], count: 1
   end
+
+  test 'creating 1-passenger booking after adding and removing passenger fields' do
+    fourthflight = flights(:fourthflight).id
+
+    visit "bookings/new?flight_id=#{fourthflight}&commit=Select+Flight"
+    assert_current_path '/bookings/new', ignore_query: true
+
+    # load one set of fields upon loading
+    # with removal button disabled
+    assert_text 'PASSENGER 1'
+    assert_selector '.remove_passenger_button.disabled'
+    assert_selector 'input', count: 5
+  end
 end
