@@ -123,5 +123,12 @@ class BookingsTest < ApplicationSystemTestCase
     end
 
     assert_selector 'input', count: 5
+
+    # on last set of fields,
+    # remove button should be disabled
+    # should not let you remove the last field
+    assert_selector '.remove_passenger_button.disabled'
+    find('.remove_passenger_button').click
+    assert_selector 'input', count: 5
   end
 end
