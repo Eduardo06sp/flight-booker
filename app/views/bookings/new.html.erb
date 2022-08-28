@@ -2,7 +2,8 @@
 <h2>Book Flight</h2>
 <%= form_with model: @booking, class: 'new_booking_form', data: {
   controller: 'passenger',
-  'passenger-max-passenger-count-value': @selected_flight.available_seats
+  'passenger-max-passenger-count-value': @selected_flight.available_seats,
+  'passenger-passenger-count-value': 0
 } do |form| %>
 
   <%= render 'shared/flight_result', flight: @selected_flight %>
