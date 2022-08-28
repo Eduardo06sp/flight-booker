@@ -104,5 +104,7 @@ class BookingsTest < ApplicationSystemTestCase
     assert_selector 'input', count: 9
 
     assert_no_selector '.remove_passenger_button.disabled'
+
+    assert_selector '.add_passenger_button:disabled'
   end
 end
