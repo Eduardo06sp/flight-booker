@@ -95,5 +95,14 @@ class BookingsTest < ApplicationSystemTestCase
     assert_text 'PASSENGER 1'
     assert_selector '.remove_passenger_button.disabled'
     assert_selector 'input', count: 5
+
+    # adding new fields
+    # ensuring that no buttons are disabled
+    # adding new passengers is disabled when max passengers are added
+    click_on 'Add Passenger'
+    assert_text 'PASSENGER 2'
+    assert_selector 'input', count: 9
+
+    assert_no_selector '.remove_passenger_button.disabled'
   end
 end
