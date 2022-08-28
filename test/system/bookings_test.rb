@@ -110,6 +110,7 @@ class BookingsTest < ApplicationSystemTestCase
     # removing a field
     # cancelling will not affect any fields
     # accepting will actually remove the fields
+    # add passenger button will be reenabled
     removal_buttons = all('.remove_passenger_button')
 
     confirmation = dismiss_confirm do
@@ -123,6 +124,7 @@ class BookingsTest < ApplicationSystemTestCase
     end
 
     assert_selector 'input', count: 5
+    assert_selector '.add_passenger_button:enabled'
 
     # on last set of fields,
     # remove button should be disabled
