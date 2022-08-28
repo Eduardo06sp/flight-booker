@@ -2,8 +2,6 @@ require "application_system_test_case"
 
 class BookingsTest < ApplicationSystemTestCase
   test 'creating 2-passenger booking' do
-    origin_airport = airports(:losangelesairport).id
-    destination_airport = airports(:guadalajaraairport).id
     secondflight = flights(:secondflight).id
 
     visit "bookings/new?flight_id=#{secondflight}&commit=Select+Flight"
