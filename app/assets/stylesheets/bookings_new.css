@@ -27,6 +27,16 @@
   text-underline-offset: 6px;
 }
 
+.remove_passenger_button {
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+
+.remove_passenger_button img {
+  width: 100%;
+}
+
 /* PASSENGER FIELDS */
 
 .passenger_fields {
