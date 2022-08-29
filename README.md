@@ -51,7 +51,7 @@ bin/rails test
 * Nested forms to create multiple objects with a single submission
 * Database seeds to populate application with sample, starter data
 * System & functional tests to ensure proper application functionality
-* Dynamic addition of passengers using Stimulus
+* Dynamic addition/removal of passengers using Stimulus
 * Fast searching using Turbo Frames
 * Responsive design
 
