@@ -136,7 +136,6 @@ export default class extends Controller {
     if (this.addPassengerButtonDisabled()) this.reenablePassengerButton();
 
     this.passengerCountValue--;
-
     this.reorderPassengers();
   }
 
