@@ -110,6 +110,10 @@ export default class extends Controller {
     };
   }
 
+  removalConfirmed(passenger) {
+    return window.confirm(`Are you sure you want to delete ${passenger.name}?`);
+  }
+
   remove(e) {
     if (this.passengerCountValue === 1) {
       return;
@@ -117,9 +121,7 @@ export default class extends Controller {
 
     const passengerToRemove = this.passengerToRemove(e.currentTarget);
 
-    const confirmation = window.confirm(`Are you sure you want to delete ${passengerToRemove.name}?`);
-
-    if (confirmation) {
+    if (this.removalConfirmed(passengerToRemove)) {
       passengerToRemove.container.remove();
     } else {
       return;
