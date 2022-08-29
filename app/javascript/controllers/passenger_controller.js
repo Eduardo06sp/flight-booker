@@ -118,6 +118,10 @@ export default class extends Controller {
     return this.passengerCountValue === 1;
   }
 
+  addPassengerButtonDisabled() {
+    return document.querySelector('.add_passenger_button').disabled;
+  }
+
   remove(e) {
     if (this.lastPassengerLeft()) return;
 
@@ -129,9 +133,7 @@ export default class extends Controller {
       return;
     }
 
-    if (document.querySelector('.add_passenger_button:disabled')) {
-      this.reenablePassengerButton();
-    }
+    if (this.addPassengerButtonDisabled()) this.reenablePassengerButton();
 
     this.passengerCountValue--;
 
