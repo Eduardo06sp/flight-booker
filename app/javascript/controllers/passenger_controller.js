@@ -100,19 +100,27 @@ export default class extends Controller {
     );
   }
 
+  passengerToRemove(removeButton) {
+    const targetId = removeButton.dataset.passengerContainer;
+    const passengerContainer = document.getElementById(targetId);
+
+    return {
+      container: passengerContainer,
+      name: passengerContainer.querySelector('.passenger_index').textContent
+    };
+  }
+
   remove(e) {
     if (this.passengerCountValue === 1) {
       return;
     }
 
-    const removeButton = e.currentTarget;
-    const targetId = removeButton.dataset.passengerContainer;
-    const passengerContainer = document.getElementById(targetId);
-    const passenger = passengerContainer.querySelector('.passenger_index').textContent;
-    const confirmation = window.confirm(`Are you sure you want to delete ${passenger}?`);
+    const passengerToRemove = this.passengerToRemove(e.currentTarget);
+
+    const confirmation = window.confirm(`Are you sure you want to delete ${passengerToRemove.name}?`);
 
     if (confirmation) {
-      passengerContainer.remove();
+      passengerToRemove.container.remove();
     } else {
       return;
     }
