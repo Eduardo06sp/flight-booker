@@ -114,10 +114,12 @@ export default class extends Controller {
     return window.confirm(`Are you sure you want to delete ${passenger.name}?`);
   }
 
+  lastPassengerLeft() {
+    return this.passengerCountValue === 1;
+  }
+
   remove(e) {
-    if (this.passengerCountValue === 1) {
-      return;
-    }
+    if (this.lastPassengerLeft()) return;
 
     const passengerToRemove = this.passengerToRemove(e.currentTarget);
 
