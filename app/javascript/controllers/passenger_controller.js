@@ -58,19 +58,19 @@ export default class extends Controller {
     return passenger.form;
   }
 
+  maxPassengersReached() {
+    return this.passengerCountValue >= this.maxPassengerCountValue;
+  }
+
   addPassengerFields() {
-    if (this.passengerCountValue >= this.maxPassengerCountValue) {
-      return;
-    }
+    if (this.maxPassengersReached()) return;
 
     this.passengerCountValue++;
 
     const passengerFields = this.newPassengerFields();
     this.addPassengerButtonTarget.before(passengerFields);
 
-    if (this.passengerCountValue >= this.maxPassengerCountValue) {
-      this.disableAddPassengerButton();
-    }
+    if (this.maxPassengersReached()) this.disableAddPassengerButton();
   }
 
   disableRemoveButton() {
