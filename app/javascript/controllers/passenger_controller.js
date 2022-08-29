@@ -39,14 +39,7 @@ export default class extends Controller {
     };
   }
 
-  addPassengerFields() {
-    if (this.passengerCountValue >= this.maxPassengerCountValue) {
-      return;
-    }
-
-    this.passengerCountValue++;
-
-    const passenger = this.getPassengerElements();
+  updatePassengerFields(passenger) {
     const currentTime = Date.now();
 
     passenger.container.setAttribute('id', `passenger_container_${currentTime}`);
@@ -57,8 +50,23 @@ export default class extends Controller {
     this.setUniqueValues(passenger.labels, 'for', currentTime);
     this.setUniqueValues(passenger.inputs, 'id', currentTime);
     this.setUniqueValues(passenger.inputs, 'name', currentTime);
+  }
 
-    this.addPassengerButtonTarget.before(passenger.form);
+  newPassengerFields() {
+    const passenger = this.passengerFieldsClone();
+    this.updatePassengerFields(passenger);
+    return passenger.form;
+  }
+
+  addPassengerFields() {
+    if (this.passengerCountValue >= this.maxPassengerCountValue) {
+      return;
+    }
+
+    this.passengerCountValue++;
+
+    const passengerFields = this.newPassengerFields();
+    this.addPassengerButtonTarget.before(passengerFields);
 
     if (this.passengerCountValue >= this.maxPassengerCountValue) {
       this.disableAddPassengerButton();
