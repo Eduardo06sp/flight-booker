@@ -26,7 +26,7 @@ export default class extends Controller {
     this.addPassengerButtonTarget.disabled = false;
   }
 
-  getPassengerElements() {
+  passengerFieldsClone() {
     const formClone = this.passengerFormTarget.content.cloneNode(true);
 
     return {
