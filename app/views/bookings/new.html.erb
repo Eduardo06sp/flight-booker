@@ -14,7 +14,7 @@
     <div class="passenger_container">
       <div class="passenger_header">
         <p class="passenger_index">Passenger 1</p>
-        <div class="remove_passenger_button" data-action="click->passenger#remove">
+        <div class="remove_passenger_button" data-action="mousedown->passenger#remove">
           <%= image_tag 'minus-icon.png', alt: 'Remove passenger button' %>
         </div>
       </div>
@@ -67,7 +67,7 @@
   </template>
 
   <div>
-    <button class="add_passenger_button" data-action="passenger#addPassengerFields" data-passenger-target="addPassengerButton" type="button">Add Passenger</button>
+    <button class="add_passenger_button" data-action="mousedown->passenger#addPassengerFields" data-passenger-target="addPassengerButton" type="button">Add Passenger</button>
   </div>
 
   <div>
