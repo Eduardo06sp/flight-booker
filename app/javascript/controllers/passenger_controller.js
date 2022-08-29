@@ -26,6 +26,19 @@ export default class extends Controller {
     this.addPassengerButtonTarget.disabled = false;
   }
 
+  getPassengerElements() {
+    const formClone = this.passengerFormTarget.content.cloneNode(true);
+
+    return {
+      form: formClone,
+      container: formClone.querySelector('.passenger_container'),
+      removeButton: formClone.querySelector('.remove_passenger_button'),
+      labels: formClone.querySelectorAll('label'),
+      inputs: formClone.querySelectorAll('input'),
+      count: formClone.querySelector('.passenger_index')
+    };
+  }
+
   addPassengerFields() {
     if (this.passengerCountValue >= this.maxPassengerCountValue) {
       return;
@@ -33,24 +46,19 @@ export default class extends Controller {
 
     this.passengerCountValue++;
 
-    const passengerForm = this.passengerFormTarget.content.cloneNode(true);
-    const passengerContainer = passengerForm.querySelector('.passenger_container');
-    const passengerRemoveButton = passengerForm.querySelector('.remove_passenger_button');
-    const passengerLabels = passengerForm.querySelectorAll('label');
-    const passengerInputs = passengerForm.querySelectorAll('input');
-    const passengerCount = passengerForm.querySelector('.passenger_index');
+    const passenger = this.getPassengerElements();
     const currentTime = Date.now();
 
-    passengerContainer.setAttribute('id', `passenger_container_${currentTime}`);
-    passengerRemoveButton.setAttribute('data-passenger-container', `passenger_container_${currentTime}`);
+    passenger.container.setAttribute('id', `passenger_container_${currentTime}`);
+    passenger.removeButton.setAttribute('data-passenger-container', `passenger_container_${currentTime}`);
 
-    passengerCount.textContent = `Passenger ${this.passengerCountValue}`;
+    passenger.count.textContent = `Passenger ${this.passengerCountValue}`;
 
-    this.setUniqueValues(passengerLabels, 'for', currentTime);
-    this.setUniqueValues(passengerInputs, 'id', currentTime);
-    this.setUniqueValues(passengerInputs, 'name', currentTime);
+    this.setUniqueValues(passenger.labels, 'for', currentTime);
+    this.setUniqueValues(passenger.inputs, 'id', currentTime);
+    this.setUniqueValues(passenger.inputs, 'name', currentTime);
 
-    this.addPassengerButtonTarget.before(passengerForm);
+    this.addPassengerButtonTarget.before(passenger.form);
 
     if (this.passengerCountValue >= this.maxPassengerCountValue) {
       this.disableAddPassengerButton();
