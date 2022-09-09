@@ -5,6 +5,35 @@
   </head>
 
   <body>
-    <p>Hi, just confirming your booking!</p>
+    <p>Thank you for booking a flight with us, <%= @passenger.first_name %>!</p>
+    <p>Please keep this for your records.</p>
+
+    <ul>
+      <li>
+        <p><b>Departing from:</b>
+        <%= @flight.origin.name %> 
+        (<%= @flight.origin.code %>) at 
+        <%= @flight.departure_time_formatted %>, <%= @flight.departure_date_formatted %></p>
+      </li>
+      <li>
+        <p><b>Arriving to:</b>
+        <%= @flight.destination.name %> 
+        (<%= @flight.destination.code %>) at 
+        <%= @flight.arrival_time_formatted %>, <%= @flight.arrival_date_formatted %></p>
+      </li>
+
+      <li><b>Passengers:</b></li>
+      <ol>
+        <% @booking.passengers.each do |passenger| %>
+          <li>
+            <ul>
+              <li><b><%= "#{passenger.first_name} #{passenger.last_name}" %></b></li>
+              <li><%= passenger.email %></li>
+              <li><%= passenger.phone_number %></li>
+            </ul>
+          </li>
+        <% end %>
+      </ol>
+    </ul>
   </body>
 </html>

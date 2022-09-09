@@ -1,1 +1,20 @@
-Hi, just confirming your booking!
+Thank you for booking a flight with us, <%= @passenger.first_name %>!
+Please keep this for your records.
+
+Departing from:
+<%= @flight.origin.name %> (<%= @flight.origin.code %>)
+at <%= @flight.departure_time_formatted %>, <%= @flight.departure_date_formatted %>
+
+Arriving to:
+<%= @flight.destination.name %> (<%= @flight.destination.code %>)
+at <%= @flight.arrival_time_formatted %>, <%= @flight.arrival_date_formatted %>
+
+
+Passengers:
+==========================================
+<% @booking.passengers.each do |passenger| %>
+  <%= "#{passenger.first_name} #{passenger.last_name}" %>
+  <%= passenger.email %>
+  <%= passenger.phone_number %>
+==========================================
+<% end %>
