@@ -11,6 +11,7 @@ class Booking < ApplicationRecord
   def send_confirmation_email
     passengers.each do |passenger|
       PassengerMailer.with(
+        booking: self,
         flight: Flight.find(flight_id),
         passenger:
       ).confirmation_email.deliver_later
