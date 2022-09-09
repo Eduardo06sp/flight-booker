@@ -54,6 +54,7 @@ bin/rails test
 * Dynamic addition/removal of passengers using Stimulus
 * Fast searching using Turbo Frames
 * Responsive design
+* Confirmation emails (*note:* only available in a local clone, not live / deployed)
 
 ## Reporting Issues / Feedback / Contact
 Bug reports are greatly appreciated. You may create a new issue with a simple description of the problem, and any steps leading up to it.
